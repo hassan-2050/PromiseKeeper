@@ -27,13 +27,17 @@ The app supports pasted text and `.txt`/`.md` import, paragraph fragments with s
 
 ## Demo and narration
 
-[Watch the narrated demo on YouTube](https://www.youtube.com/watch?v=iBQeWlr3Vbk).
+[Previous interface demo on YouTube](https://www.youtube.com/watch?v=iBQeWlr3Vbk). The redesigned interface has a fresh local narrated recording at `demo/assets/video/final_demo.mp4`; its replacement YouTube upload is pending.
 
 The captured browser journey uses real local Qwen inference on explicitly synthetic research notes. The user selected Kokoro's `af_sarah` voice. `demo/assets/video/final_demo.mp4` contains the narrated demo, burned captions and a selectable English caption track. `demo/assets/audio/kokoro_voiceover.wav`, `subtitles.srt` and `narration_provenance.json` preserve the audio, caption timing and model hashes.
 
 To record again, use a fresh local demo database, start the services (the recording defaults to web port 3001), install Chrome and Playwright's video helper (`npx playwright install ffmpeg`), and run `npm run demo:record`. Set `DEMO_WEB_URL` to use another web port. The script captures input notes, actual extraction, evidence review, approval, the overdue dashboard, a follow-up draft and privacy controls, then writes `scene_timing.json`.
 
-For narration, create a separate Python environment, install `demo/requirements.txt`, ensure FFmpeg/ffprobe are on PATH, and run `python demo/narrate_demo.py --voice af_sarah`. The script downloads the official Kokoro-82M revision recorded in provenance, uses natural speech at speed 1.0, holds a scene's final frame when extra narration time is needed, and renders the final MP4. The recording and narration scripts are included; media outputs are local artifacts. Source and screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The published YouTube link is verified and included in the DEV article, which awaits user review.
+For narration, create a separate Python environment, install `demo/requirements.txt`, ensure FFmpeg/ffprobe are on PATH, and run `python demo/narrate_demo.py --voice af_sarah`. The script downloads the official Kokoro-82M revision recorded in provenance, uses natural speech at speed 1.0, holds a scene's final frame when extra narration time is needed, and renders the final MP4. The recording and narration scripts are included; media outputs are local artifacts. Source and screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The previous public video uses the earlier UI. The DEV article is clearly marked pending a matching upload of the refreshed video.
+
+## UI verification
+
+The charcoal/forest/mint redesign uses a left sidebar, vertical forms and direct review actions. It includes working mobile navigation and help, a date-grouped timeline, draft copy/download, and source-specific deletion. Run `npm run test:e2e` for the real local-model browser journey and `npm run test:a11y` for 16 automated light/dark, dialog and mobile-navigation checks. See [docs/UI_REDESIGN.md](docs/UI_REDESIGN.md) for the verification scope.
 
 ## Data and privacy
 

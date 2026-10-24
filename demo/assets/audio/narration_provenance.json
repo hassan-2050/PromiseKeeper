@@ -5,7 +5,7 @@
   "user_selected": true,
   "sample_rate": 24000,
   "speech_speed": 1.0,
-  "duration": 113.12,
+  "duration": 112.36,
   "caption_timing": "Kokoro predicted token durations",
   "video_alignment": "Original actions retain their timing; extra narration holds the last frame of a scene.",
   "packages": {
@@ -23,65 +23,65 @@
     {
       "name": "problem",
       "start": 0.0,
-      "end": 9.36,
+      "end": 9.56,
       "source_start": 0,
-      "source_end": 9.3365074,
+      "source_end": 9.552245,
       "text": "One sentence can hold a promise. A week later, it can be hard to remember who said it, or when."
     },
     {
       "name": "import",
-      "start": 9.36,
-      "end": 21.52,
-      "source_start": 9.3365074,
-      "source_end": 21.478107,
+      "start": 9.56,
+      "end": 22.04,
+      "source_start": 9.552245,
+      "source_end": 22.012666199999998,
       "text": "Here, a researcher brings in a week of meeting notes. The sample is synthetic, and its source date is included so relative timing can be handled carefully."
     },
     {
       "name": "extraction",
-      "start": 21.52,
-      "end": 34.36,
-      "source_start": 21.478107,
-      "source_end": 34.283904,
+      "start": 22.04,
+      "end": 33.52,
+      "source_start": 22.012666199999998,
+      "source_end": 30.626332299999998,
       "text": "The notes stay on this device. Qwen runs through local Ollama and finds three possible commitments: a field report, cleaned survey figures, and a conditional appendix."
     },
     {
       "name": "evidence",
-      "start": 34.36,
-      "end": 48.36,
-      "source_start": 34.283904,
-      "source_end": 46.413671300000004,
+      "start": 33.52,
+      "end": 47.52,
+      "source_start": 30.626332299999998,
+      "source_end": 42.825453800000005,
       "text": "Each suggestion keeps its exact source quote in view. The already-sent consent forms and a vague thought about a conference are left out. A matching quote is evidence to check, not proof that a promise is correct."
     },
     {
       "name": "review",
-      "start": 48.36,
-      "end": 64.84,
-      "source_start": 46.413671300000004,
-      "source_end": 62.5731493,
+      "start": 47.52,
+      "end": 64.0,
+      "source_start": 42.825453800000005,
+      "source_end": 59.1011825,
       "text": "The researcher checks the evidence and approves the overdue report. The dashboard now shows one confirmed promise past its date, while two suggestions wait for review. Human approval turns a possible obligation into an action worth following up."
     },
     {
       "name": "followup",
-      "start": 64.84,
-      "end": 80.96,
-      "source_start": 62.5731493,
-      "source_end": 78.6816507,
+      "start": 64.0,
+      "end": 80.2,
+      "source_start": 59.1011825,
+      "source_end": 75.27447190000001,
       "text": "PromiseKeeper prepares a polite follow-up that the researcher can edit. It is only a draft. Nothing is sent automatically. The original date is a question to confirm, and the recipient can explain if the timing has changed."
     },
     {
       "name": "evaluation",
-      "start": 80.96,
-      "end": 101.96,
-      "source_start": 78.6816507,
-      "source_end": 86.715224,
+      "start": 80.2,
+      "end": 101.2,
+      "source_start": 75.27447190000001,
+      "source_end": 83.32121369999999,
       "text": "In a measured run on fifty-five authored synthetic examples, commitment labels reached forty true positives with no false positives or misses. Owner matches were thirty of thirty-five; explicit dates were five of five. These numbers describe this small synthetic set, not real-world accuracy or time saved."
     },
     {
       "name": "privacy",
-      "start": 101.96,
-      "end": 113.12,
-      "source_start": 86.715224,
-      "source_end": 94.4,
+      "start": 101.2,
+      "end": 112.36,
+      "source_start": 83.32121369999999,
+      "source_end": 91,
       "text": "Your conversations remain yours to review and remove. PromiseKeeper keeps the evidence close, the next step visible, and the final decision in human hands."
     }
   ]

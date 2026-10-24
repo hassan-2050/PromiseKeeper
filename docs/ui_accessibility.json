@@ -1,0 +1,137 @@
+{
+  "tool": "axe-core 4.10.3",
+  "scope": "Automated WCAG 2 A/AA and 2.1 AA rules on the listed UI states; not a complete manual accessibility audit.",
+  "checked_at": "2026-10-24T11:50:33.272Z",
+  "states": [
+    {
+      "theme": "light",
+      "view": "Overview",
+      "violations": 0,
+      "passed_rules": 22,
+      "incomplete_rules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "theme": "light",
+      "view": "Review inbox",
+      "violations": 0,
+      "passed_rules": 25,
+      "incomplete_rules": []
+    },
+    {
+      "theme": "light",
+      "view": "Import notes",
+      "violations": 0,
+      "passed_rules": 23,
+      "incomplete_rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "theme": "light",
+      "view": "Timeline",
+      "violations": 0,
+      "passed_rules": 22,
+      "incomplete_rules": []
+    },
+    {
+      "theme": "light",
+      "view": "Follow-ups",
+      "violations": 0,
+      "passed_rules": 21,
+      "incomplete_rules": []
+    },
+    {
+      "theme": "light",
+      "view": "Privacy",
+      "violations": 0,
+      "passed_rules": 21,
+      "incomplete_rules": []
+    },
+    {
+      "theme": "light",
+      "view": "Help dialog",
+      "violations": 0,
+      "passed_rules": 12,
+      "incomplete_rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "theme": "light",
+      "view": "Mobile navigation",
+      "violations": 0,
+      "passed_rules": 21,
+      "incomplete_rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "theme": "dark",
+      "view": "Overview",
+      "violations": 0,
+      "passed_rules": 22,
+      "incomplete_rules": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "theme": "dark",
+      "view": "Review inbox",
+      "violations": 0,
+      "passed_rules": 25,
+      "incomplete_rules": []
+    },
+    {
+      "theme": "dark",
+      "view": "Import notes",
+      "violations": 0,
+      "passed_rules": 23,
+      "incomplete_rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "theme": "dark",
+      "view": "Timeline",
+      "violations": 0,
+      "passed_rules": 22,
+      "incomplete_rules": []
+    },
+    {
+      "theme": "dark",
+      "view": "Follow-ups",
+      "violations": 0,
+      "passed_rules": 21,
+      "incomplete_rules": []
+    },
+    {
+      "theme": "dark",
+      "view": "Privacy",
+      "violations": 0,
+      "passed_rules": 21,
+      "incomplete_rules": []
+    },
+    {
+      "theme": "dark",
+      "view": "Help dialog",
+      "violations": 0,
+      "passed_rules": 12,
+      "incomplete_rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "theme": "dark",
+      "view": "Mobile navigation",
+      "violations": 0,
+      "passed_rules": 21,
+      "incomplete_rules": [
+        "color-contrast"
+      ]
+    }
+  ]
+}

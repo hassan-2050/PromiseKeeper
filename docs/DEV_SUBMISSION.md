@@ -1,3 +1,5 @@
+**PENDING MATCHING DEMO UPLOAD:** The UI, screenshots and local narrated video have been refreshed. The new video needs a user-supplied YouTube URL before this article is ready for final review.
+
 Title: I Built an AI That Remembers the Promises We Forget
 
 Tags: `devchallenge`, `hf26challenge`, `opensource`, `ai`
@@ -22,11 +24,11 @@ The interface gives those distinctions room: an evidence review inbox, upcoming 
 
 The desired payoff is modest and concrete: bring the relevant promise back into view, with enough context to decide the next step.
 
+I designed the workspace around reading and deciding: a left sidebar, vertically arranged input fields, and charcoal, forest-green and mint surfaces. Source quotes stay readable inside each card. The mobile drawer supports keyboard focus and Escape, and the help dialog explains the review boundary. Follow-up drafts can be copied or downloaded; source deletion lets the person check exactly what they are removing.
+
 ## Demo
 
-{% youtube iBQeWlr3Vbk %}
-
-[Watch the demo on YouTube](https://www.youtube.com/watch?v=iBQeWlr3Vbk). The video is 1 minute 53 seconds long, recorded at 1920x1080, and narrated by genuine Kokoro-82M using the `af_sarah` voice.
+The redesigned interface has a new 112.36-second, 1920x1080 recording narrated by genuine Kokoro-82M using `af_sarah`. It is saved at `demo/assets/video/final_demo.mp4` and awaits a matching public YouTube upload. The previous upload shows the earlier interface and will not be presented as the refreshed demo.
 
 The recording follows a researcher importing five snippets of synthetic notes. Actual local Qwen inference finds three candidates: a revised field report, cleaned survey figures, and a conditional appendix. The already-delivered consent forms and vague conference thought stay out of the action queue.
 
@@ -86,7 +88,7 @@ Review changes create audit events. A source deletion removes its linked commitm
 
 Follow-up drafting uses a deterministic template assembled from approved fields. It does not ask a second model to invent background context, recipients, or excuses. The local model's core job is finding candidate obligations in unstructured conversation. Once the person approves the fields, predictable drafting keeps the next step inspectable.
 
-I checked the implementation with backend API tests, a TypeScript check, a production build, and a Playwright smoke test covering the main screens, mobile width and dark mode. The recording also runs the actual browser, backend and local model. Failed inference cannot be replaced with a canned response to keep the demo moving.
+I checked the implementation with four backend API tests and a production build including TypeScript checks. The browser journey uses genuine local Qwen inference and covers file loading, quote inspection, owner/date/note edits, approval, editable draft copy and download, the timeline, CSV export, completion, source deletion and cancellation, help, mobile keyboard navigation and dark mode. A later import is checked to ensure it does not inherit the previous source timestamp. Automated axe checks report zero violations for the selected rules across 16 light/dark page, dialog and mobile-drawer states; that is a scoped automated check, not a complete manual accessibility audit. The recording runs the actual browser, backend and local model.
 
 For extraction, I authored 55 labelled synthetic cases across 11 categories. The preserved run produced these results:
 

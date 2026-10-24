@@ -4,14 +4,14 @@
 
 ## Captured artifacts
 
-- `demo/assets/video/demo_silent.mp4`: 94.40-second, 1920×1080 browser recording.
+- `demo/assets/video/demo_silent.mp4`: 91.00-second, 1920×1080 browser recording.
 - `demo/assets/video/scene_timing.json`: measured scene boundaries for that recording.
-- `demo/assets/video/final_demo.mp4`: 113.12-second, 1920×1080 narrated video using the user's selected `af_sarah` Kokoro voice.
+- `demo/assets/video/final_demo.mp4`: 112.36-second, 1920×1080 narrated video using the user's selected `af_sarah` Kokoro voice.
 - `demo/assets/audio/kokoro_voiceover.wav`: genuine Kokoro-82M speech, mono 24 kHz PCM.
 - `demo/assets/audio/subtitles.srt`: captions timed from Kokoro's predicted token durations.
 - `demo/assets/audio/narration_script.md`: narration text and final scene timings.
 - `demo/assets/audio/narration_provenance.json`: official model revision, weight/voice hashes, package versions and alignment details.
-- `demo/assets/screenshots/`: actual dashboard, input notes, evidence, approved outcome, draft and privacy screens.
+- `demo/assets/screenshots/`: actual dashboard, input notes, evidence, approved outcome, draft, privacy, timeline, mobile and dark-mode screens.
 
 ## Reproduce
 
@@ -21,4 +21,4 @@ Create a separate Python environment and install `demo/requirements.txt`. With F
 
 Original browser actions retain their recorded timing. The renderer holds a scene's final frame when its narration needs more time; the extra holds are documented in provenance. No processing speed or saved-hours claim is derived from the edited runtime.
 
-See `docs/DEMO_VERIFICATION.md` for verification. Source and screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The user uploaded the narrated video: [watch the demo](https://www.youtube.com/watch?v=iBQeWlr3Vbk). The link and embed were verified, and the article awaits user review.
+See `docs/DEMO_VERIFICATION.md` for verification. Source and screenshots are published in `hassan-2050/PromiseKeeper`. The previous YouTube upload (https://www.youtube.com/watch?v=iBQeWlr3Vbk) shows the earlier interface. The refreshed narrated video is ready locally for the user to upload and return its new URL.

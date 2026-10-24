@@ -32,19 +32,19 @@ The redesigned interface has a new 112.36-second, 1920x1080 recording narrated b
 
 The recording follows a researcher importing five snippets of synthetic notes. Actual local Qwen inference finds three candidates: a revised field report, cleaned survey figures, and a conditional appendix. The already-delivered consent forms and vague conference thought stay out of the action queue.
 
-![Synthetic research notes in the actual import screen](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/input-notes.png)
+![Synthetic research notes in the actual import screen](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/ca7f7f1b4ee8bb53049e8db88cf647e37728fe10/demo/assets/screenshots/input-notes.png)
 
 The reviewer checks the quotes, approves the report, and sees one confirmed promise past its date. Two suggestions remain available for review.
 
-![Exact source quotes beside the extracted suggestions](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/evidence-review.png)
+![Exact source quotes beside the extracted suggestions](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/ca7f7f1b4ee8bb53049e8db88cf647e37728fe10/demo/assets/screenshots/evidence-review.png)
 
-![Dashboard after approving the overdue report](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/overdue-dashboard.png)
+![Dashboard after approving the overdue report](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/ca7f7f1b4ee8bb53049e8db88cf647e37728fe10/demo/assets/screenshots/overdue-dashboard.png)
 
 The final action is preparing an editable follow-up. The draft asks whether the recorded timing has shifted; it does not assume the person has failed to deliver.
 
-![An editable follow-up draft that the user must review](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/reviewed-follow-up.png)
+![An editable follow-up draft that the user must review](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/ca7f7f1b4ee8bb53049e8db88cf647e37728fe10/demo/assets/screenshots/reviewed-follow-up.png)
 
-![Local model status, export and data deletion controls](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/privacy-controls.png)
+![Local model status, export and data deletion controls](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/ca7f7f1b4ee8bb53049e8db88cf647e37728fe10/demo/assets/screenshots/privacy-controls.png)
 
 These are screenshots of the working application. The video preserves the browser's original action timing, with added scene holds for narration. Its edited runtime is not a processing benchmark.
 

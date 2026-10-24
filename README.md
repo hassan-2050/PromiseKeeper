@@ -2,7 +2,7 @@
 
 PromiseKeeper is a local-first, evidence-led assistant for conversational commitments. Import notes, review suggestions with their exact source quote, approve what is real, and prepare follow-up drafts for a person to edit. It never sends messages.
 
-![Actual PromiseKeeper dashboard after reviewing synthetic notes](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/overdue-dashboard.png)
+![Actual PromiseKeeper dashboard after reviewing synthetic notes](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/ca7f7f1b4ee8bb53049e8db88cf647e37728fe10/demo/assets/screenshots/overdue-dashboard.png)
 
 ## Run locally
 

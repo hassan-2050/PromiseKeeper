@@ -9,7 +9,7 @@
 - [x] User explicitly approved `hassan-2050/PromiseKeeper` as public. Verified the authenticated account, reviewed 52 staged files for secrets and generated artifacts, created the repository, and pushed `main`: https://github.com/hassan-2050/PromiseKeeper
 - [ ] Upload the redesigned `final_demo.mp4` to YouTube and receive its new actual URL. The previous `iBQeWlr3Vbk` upload shows the earlier UI and is not reused as the refreshed demo embed.
 - [x] Update the article for the redesigned interface and verification scope. Mark it pending a matching new YouTube URL.
-- [ ] Push the 10 refreshed screenshots and replace the article and README image references with verified URLs pinned to the redesign commit.
+- [x] Push all 10 refreshed screenshots. Verified HTTP 200, PNG content type and byte equality for every URL pinned to redesign commit `ca7f7f1b4ee8bb53049e8db88cf647e37728fe10`; updated the article and README references.
 - [ ] After the new URL is verified, finish the ready-to-paste DEV Markdown and present it for review.
 - [ ] User reviews the article. DEV publication remains with the user; no automatic publication is authorized.
 

@@ -21,4 +21,4 @@ Create a separate Python environment and install `demo/requirements.txt`. With F
 
 Original browser actions retain their recorded timing. The renderer holds a scene's final frame when its narration needs more time; the extra holds are documented in provenance. No processing speed or saved-hours claim is derived from the edited runtime.
 
-See `docs/DEMO_VERIFICATION.md` for verification. Source and screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The narrated video is ready for the user's review and YouTube upload.
+See `docs/DEMO_VERIFICATION.md` for verification. Source and screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The user uploaded the narrated video: [watch the demo](https://www.youtube.com/watch?v=iBQeWlr3Vbk). The link and embed were verified, and the article awaits user review.

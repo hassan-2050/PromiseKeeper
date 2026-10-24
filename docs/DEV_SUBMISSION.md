@@ -1,12 +1,6 @@
-# DEV Challenge submission â€” publication pending
-
-**PENDING DRAFT — not ready to publish.**
-
 Title: I Built an AI That Remembers the Promises We Forget
 
 Tags: `devchallenge`, `hf26challenge`, `opensource`, `ai`
-
-The application, screenshots and Sarah-narrated demo are complete. The public repository is [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). All screenshot URLs below were verified against their source bytes and pinned to a Git commit. The video still needs the user's YouTube upload and actual URL. The completed article must be reviewed before publication.
 
 ---
 
@@ -30,7 +24,9 @@ The desired payoff is modest and concrete: bring the relevant promise back into 
 
 ## Demo
 
-The final narrated video is available locally at `demo/assets/video/final_demo.mp4`. It is 1 minute 53 seconds long, recorded at 1920×1080, and narrated by genuine Kokoro-82M using the user-selected `af_sarah` voice. Public video embedding is pending the user's YouTube upload.
+{% youtube iBQeWlr3Vbk %}
+
+[Watch the demo on YouTube](https://www.youtube.com/watch?v=iBQeWlr3Vbk). The video is 1 minute 53 seconds long, recorded at 1920x1080, and narrated by genuine Kokoro-82M using the `af_sarah` voice.
 
 The recording follows a researcher importing five snippets of synthetic notes. Actual local Qwen inference finds three candidates: a revised field report, cleaned survey figures, and a conditional appendix. The already-delivered consent forms and vague conference thought stay out of the action queue.
 
@@ -52,7 +48,7 @@ These are screenshots of the working application. The video preserves the browse
 
 ## Code
 
-[Browse PromiseKeeper on GitHub](https://github.com/hassan-2050/PromiseKeeper). The repository includes the frontend, backend, synthetic evaluation corpus, API tests, browser smoke test, real application screenshots, and recording and narration scripts. Generated video and WAV files remain local artifacts for the YouTube handoff.
+[Browse PromiseKeeper on GitHub](https://github.com/hassan-2050/PromiseKeeper). The repository includes the frontend, backend, synthetic evaluation corpus, API tests, browser smoke test, real application screenshots, and recording and narration scripts. The recording and narration scripts reproduce the demo; generated video and WAV files are local outputs.
 
 The code is MIT licensed. The selected Qwen model and Kokoro weights have their own licenses and are downloaded separately.
 
@@ -131,4 +127,4 @@ Keeping that choice with the person matters as much as finding the sentence. A u
 
 ## Prize Categories
 
-Intended for the overall Slow and Steady challenge. This build does not claim a partner prize category. Eligibility and the final submission remain subject to the published challenge rules and the user's review.
+Overall **Slow and Steady** challenge entry.

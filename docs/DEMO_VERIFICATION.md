@@ -27,4 +27,4 @@ ffmpeg -v error -i demo/assets/video/final_demo.mp4 -f null -
 ffmpeg -hide_banner -i demo/assets/audio/kokoro_voiceover.wav -af volumedetect -f null -
 ```
 
-Source and actual screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The user must upload the video to YouTube as Public or Unlisted and return the actual URL. The DEV article remains a pending draft until that link is verified and the user reviews it.
+Source and actual screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The user supplied [the actual YouTube video](https://www.youtube.com/watch?v=iBQeWlr3Vbk). Its 11-character ID is `iBQeWlr3Vbk`; the official YouTube oEmbed endpoint returned HTTP 200, title "final demo", and the matching embed ID. The DEV article now contains `{% youtube iBQeWlr3Vbk %}` and awaits user review before publication.

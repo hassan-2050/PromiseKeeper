@@ -1,0 +1,17 @@
+services:
+  api:
+    build: { context: ., dockerfile: Dockerfile.backend }
+    ports: ["8000:8000"]
+    environment:
+      OLLAMA_URL: http://host.docker.internal:11434
+      OLLAMA_MODEL: qwen3:8b
+      DATABASE_URL: sqlite:////data/promisekeeper.db
+    volumes: ["promise-data:/data"]
+    extra_hosts: ["host.docker.internal:host-gateway"]
+  web:
+    build: { context: ., dockerfile: Dockerfile.web }
+    ports: ["3000:3000"]
+    environment: { NEXT_PUBLIC_API_URL: http://localhost:8000/api }
+    depends_on: [api]
+volumes:
+  promise-data:

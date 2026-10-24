@@ -1,0 +1,15 @@
+.git/
+node_modules/
+.next/
+.tools/
+.venv/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+**/*.db
+demo/assets/video/
+demo/assets/audio/*.wav

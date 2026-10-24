@@ -1,0 +1,11 @@
+# Evaluation
+
+`backend/eval/cases.jsonl` contains 55 synthetic, explicitly labeled cases (five each) across explicit, explicit-date, implicit, vague, conditional, fulfilled, negated, hypothetical, multi-speaker, ambiguous and duplicate categories. These are authored examples, not sampled real conversations. Run `python backend/eval/generate_cases.py` to regenerate them.
+
+## Measured local run
+
+The recorded run in `docs/eval_run.json` used Ollama `qwen3:8b`, digest `500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41`, at temperature 0 with reasoning disabled for structured extraction. Against the 55 synthetic cases, case-level commitment classification was 40 TP, 0 FP and 0 FN (precision 1.00, recall 1.00); owner exact match was 30/35 (85.7%); explicit calendar-date exact match was 5/5; and 41/41 accepted evidence quotes were literal source substrings. There was one extra accepted candidate row from a repeated promise before API grouping; the import endpoint groups exact claim/owner/recipient/deadline keys and keeps both source quotes.
+
+These are measurements on this small, synthetic, authored set after adding a conservative lexical filter for refusals, completed actions, and hypothetical language. They do not predict performance on real transcripts. The quote substring check verifies provenance only, not that a quote entails its claim or owner. The synthetic set does not cover sarcasm, multilingual speech, noisy transcription, contradictory statements, or many date formats. Relative phrases are left unresolved without a source timestamp; exact dates are tested separately. One of five repeated-promise cases produced two candidate rows; the API groups that exact duplicate and retains both quotes. No time-saved figure is claimed.
+
+Backend API checks: `cd backend; pytest -q`. Frontend production build: `npm run build`. UI smoke: `npm run test:e2e`. The reproducible local-model run is `python backend/eval/run_evaluation.py`. The browser demonstration recording source is `demo/record_demo.ts`.

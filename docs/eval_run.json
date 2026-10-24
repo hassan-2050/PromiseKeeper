@@ -1,0 +1,831 @@
+{
+  "run_type": "measured real local inference on synthetic authored examples",
+  "synthetic": true,
+  "cases": 55,
+  "model": "qwen3:8b",
+  "model_digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "completed_at_utc": "2026-10-23T20:38:39.994404+00:00",
+  "commitment_classification": {
+    "tp": 40,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "owner_exact_accuracy": {
+    "correct": 30,
+    "eligible": 35,
+    "accuracy": 0.8571428571428571
+  },
+  "deadline_exact_accuracy": {
+    "correct": 5,
+    "eligible": 5,
+    "accuracy": 1.0
+  },
+  "accepted_quote_substring_rate": {
+    "valid": 41,
+    "accepted": 41,
+    "rate": 1.0
+  },
+  "per_category": {
+    "explicit": {
+      "n": 5,
+      "positive_gold": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 5,
+      "owner_eligible": 5,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "implicit": {
+      "n": 5,
+      "positive_gold": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 0,
+      "owner_eligible": 5,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "vague": {
+      "n": 5,
+      "positive_gold": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 5,
+      "owner_eligible": 5,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "conditional": {
+      "n": 5,
+      "positive_gold": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 5,
+      "owner_eligible": 5,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "fulfilled": {
+      "n": 5,
+      "positive_gold": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 0,
+      "owner_eligible": 0,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "negated": {
+      "n": 5,
+      "positive_gold": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 0,
+      "owner_eligible": 0,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "hypothetical": {
+      "n": 5,
+      "positive_gold": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 0,
+      "owner_eligible": 0,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "multi-speaker": {
+      "n": 5,
+      "positive_gold": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 5,
+      "owner_eligible": 5,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "ambiguous": {
+      "n": 5,
+      "positive_gold": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 0,
+      "owner_eligible": 0,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "duplicate": {
+      "n": 5,
+      "positive_gold": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 5,
+      "owner_eligible": 5,
+      "date_exact": 0,
+      "date_eligible": 0
+    },
+    "explicit-date": {
+      "n": 5,
+      "positive_gold": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "owner_exact": 5,
+      "owner_eligible": 5,
+      "date_exact": 5,
+      "date_eligible": 5
+    }
+  },
+  "per_case": [
+    {
+      "id": "synthetic-01",
+      "category": "explicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "send the revised report",
+          "owner": "Ari",
+          "deadline": null,
+          "evidence": "I'll send the revised report by Friday."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-02",
+      "category": "implicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "The cleaned figures will be in your inbox tomorrow.",
+          "owner": null,
+          "deadline": null,
+          "evidence": "The cleaned figures will be in your inbox tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-03",
+      "category": "vague",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll get to that soon",
+          "owner": "Eli",
+          "deadline": null,
+          "evidence": "I'll get to that soon"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-04",
+      "category": "conditional",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "upload the appendix",
+          "owner": "Bea",
+          "deadline": null,
+          "evidence": "If the review passes, I'll upload the appendix."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-05",
+      "category": "fulfilled",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-06",
+      "category": "negated",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-07",
+      "category": "hypothetical",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-08",
+      "category": "multi-speaker",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll check the table today",
+          "owner": "Eli",
+          "deadline": null,
+          "evidence": "Yes, I'll check the table today."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-09",
+      "category": "ambiguous",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "Someone should circle back on the results",
+          "owner": null,
+          "deadline": null,
+          "evidence": "Someone should circle back on the results."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-10",
+      "category": "duplicate",
+      "expected_commitment": true,
+      "predicted_count": 2,
+      "predictions": [
+        {
+          "claim": "I'll send the report tomorrow",
+          "owner": "Sol",
+          "deadline": null,
+          "evidence": "Sol: I'll send the report tomorrow."
+        },
+        {
+          "claim": "I'll send the report tomorrow",
+          "owner": "Sol",
+          "deadline": null,
+          "evidence": "Sol: I'll send the report tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-11",
+      "category": "explicit-date",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "send the consent summary",
+          "owner": "Ari",
+          "deadline": "2026-11-03",
+          "evidence": "I will send the consent summary on 2026-11-03."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-12",
+      "category": "explicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll send the revised report by Friday.",
+          "owner": "Eli",
+          "deadline": null,
+          "evidence": "I'll send the revised report by Friday."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-13",
+      "category": "implicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "The cleaned figures will be in your inbox tomorrow.",
+          "owner": null,
+          "deadline": null,
+          "evidence": "The cleaned figures will be in your inbox tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-14",
+      "category": "vague",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll get to that soon.",
+          "owner": "Sol",
+          "deadline": null,
+          "evidence": "I'll get to that soon."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-15",
+      "category": "conditional",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "upload the appendix",
+          "owner": "Ari",
+          "deadline": null,
+          "evidence": "If the review passes, I'll upload the appendix."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-16",
+      "category": "fulfilled",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-17",
+      "category": "negated",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-18",
+      "category": "hypothetical",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-19",
+      "category": "multi-speaker",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "check the table",
+          "owner": "Sol",
+          "deadline": null,
+          "evidence": "Sol: Yes, I'll check the table today."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-20",
+      "category": "ambiguous",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "Someone should circle back on the results.",
+          "owner": null,
+          "deadline": null,
+          "evidence": "Someone should circle back on the results."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-21",
+      "category": "duplicate",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll send the report tomorrow",
+          "owner": "Nora",
+          "deadline": null,
+          "evidence": "I'll send the report tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-22",
+      "category": "explicit-date",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "send the consent summary",
+          "owner": "Eli",
+          "deadline": "2026-11-03",
+          "evidence": "I will send the consent summary on 2026-11-03."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-23",
+      "category": "explicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "send the revised report",
+          "owner": "Sol",
+          "deadline": null,
+          "evidence": "Sol: I'll send the revised report by Friday."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-24",
+      "category": "implicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "The cleaned figures will be in your inbox tomorrow.",
+          "owner": null,
+          "deadline": null,
+          "evidence": "The cleaned figures will be in your inbox tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-25",
+      "category": "vague",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll get to that soon.",
+          "owner": "Nora",
+          "deadline": null,
+          "evidence": "I'll get to that soon."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-26",
+      "category": "conditional",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "upload the appendix",
+          "owner": "Eli",
+          "deadline": null,
+          "evidence": "If the review passes, I'll upload the appendix."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-27",
+      "category": "fulfilled",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-28",
+      "category": "negated",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-29",
+      "category": "hypothetical",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-30",
+      "category": "multi-speaker",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll check the table today",
+          "owner": "Nora",
+          "deadline": null,
+          "evidence": "I'll check the table today."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-31",
+      "category": "ambiguous",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "Someone should circle back on the results.",
+          "owner": null,
+          "deadline": null,
+          "evidence": "Someone should circle back on the results."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-32",
+      "category": "duplicate",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll send the report tomorrow",
+          "owner": "Bea",
+          "deadline": null,
+          "evidence": "I'll send the report tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-33",
+      "category": "explicit-date",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "send the consent summary",
+          "owner": "Sol",
+          "deadline": "2026-11-03",
+          "evidence": "Sol: I will send the consent summary on 2026-11-03."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-34",
+      "category": "explicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll send the revised report by Friday.",
+          "owner": "Nora",
+          "deadline": null,
+          "evidence": "I'll send the revised report by Friday."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-35",
+      "category": "implicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "The cleaned figures will be in your inbox tomorrow.",
+          "owner": null,
+          "deadline": null,
+          "evidence": "The cleaned figures will be in your inbox tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-36",
+      "category": "vague",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll get to that soon.",
+          "owner": "Bea",
+          "deadline": null,
+          "evidence": "I'll get to that soon."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-37",
+      "category": "conditional",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "upload the appendix",
+          "owner": "Sol",
+          "deadline": null,
+          "evidence": "Sol: If the review passes, I'll upload the appendix."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-38",
+      "category": "fulfilled",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-39",
+      "category": "negated",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-40",
+      "category": "hypothetical",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-41",
+      "category": "multi-speaker",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll check the table today",
+          "owner": "Bea",
+          "deadline": null,
+          "evidence": "Bea: Yes, I'll check the table today."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-42",
+      "category": "ambiguous",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "Someone should circle back on the results",
+          "owner": null,
+          "deadline": null,
+          "evidence": "Someone should circle back on the results."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-43",
+      "category": "duplicate",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll send the report tomorrow",
+          "owner": "Ari",
+          "deadline": null,
+          "evidence": "I'll send the report tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-44",
+      "category": "explicit-date",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "send the consent summary",
+          "owner": "Nora",
+          "deadline": "2026-11-03",
+          "evidence": "I will send the consent summary on 2026-11-03."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-45",
+      "category": "explicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll send the revised report by Friday.",
+          "owner": "Bea",
+          "deadline": null,
+          "evidence": "Bea: I'll send the revised report by Friday."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-46",
+      "category": "implicit",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "The cleaned figures will be in your inbox",
+          "owner": null,
+          "deadline": null,
+          "evidence": "The cleaned figures will be in your inbox tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-47",
+      "category": "vague",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll get to that soon.",
+          "owner": "Ari",
+          "deadline": null,
+          "evidence": "I'll get to that soon."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-48",
+      "category": "conditional",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "upload the appendix",
+          "owner": "Nora",
+          "deadline": null,
+          "evidence": "If the review passes, I'll upload the appendix."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-49",
+      "category": "fulfilled",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-50",
+      "category": "negated",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-51",
+      "category": "hypothetical",
+      "expected_commitment": false,
+      "predicted_count": 0,
+      "predictions": []
+    },
+    {
+      "id": "synthetic-52",
+      "category": "multi-speaker",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll check the table today",
+          "owner": "Ari",
+          "deadline": null,
+          "evidence": "Ari: Yes, I'll check the table today."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-53",
+      "category": "ambiguous",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "Someone should circle back on the results.",
+          "owner": null,
+          "deadline": null,
+          "evidence": "Someone should circle back on the results."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-54",
+      "category": "duplicate",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "I'll send the report tomorrow",
+          "owner": "Eli",
+          "deadline": null,
+          "evidence": "I'll send the report tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-55",
+      "category": "explicit-date",
+      "expected_commitment": true,
+      "predicted_count": 1,
+      "predictions": [
+        {
+          "claim": "send the consent summary",
+          "owner": "Bea",
+          "deadline": "2026-11-03",
+          "evidence": "Bea: I will send the consent summary on 2026-11-03."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Synthetic and small corpus; not representative of real conversation.",
+    "Claim entailment is not scored; quote-substring validation proves provenance, not entailment.",
+    "Relative dates without a source timestamp remain unresolved by design."
+  ]
+}

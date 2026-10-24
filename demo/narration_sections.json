@@ -1,0 +1,10 @@
+[
+  {"name":"problem","text":"One sentence can hold a promise. A week later, it can be hard to remember who said it, or when."},
+  {"name":"import","text":"Here, a researcher brings in a week of meeting notes. The sample is synthetic, and its source date is included so relative timing can be handled carefully."},
+  {"name":"extraction","text":"The notes stay on this device. Qwen runs through local Ollama and finds three possible commitments: a field report, cleaned survey figures, and a conditional appendix."},
+  {"name":"evidence","text":"Each suggestion keeps its exact source quote in view. The already-sent consent forms and a vague thought about a conference are left out. A matching quote is evidence to check, not proof that a promise is correct."},
+  {"name":"review","text":"The researcher checks the evidence and approves the overdue report. The dashboard now shows one confirmed promise past its date, while two suggestions wait for review. Human approval turns a possible obligation into an action worth following up."},
+  {"name":"followup","text":"PromiseKeeper prepares a polite follow-up that the researcher can edit. It is only a draft. Nothing is sent automatically. The original date is a question to confirm, and the recipient can explain if the timing has changed."},
+  {"name":"evaluation","text":"In a measured run on fifty-five authored synthetic examples, commitment labels reached forty true positives with no false positives or misses. Owner matches were thirty of thirty-five; explicit dates were five of five. These numbers describe this small synthetic set, not real-world accuracy or time saved."},
+  {"name":"privacy","text":"Your conversations remain yours to review and remove. PromiseKeeper keeps the evidence close, the next step visible, and the final decision in human hands."}
+]

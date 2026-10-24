@@ -1,0 +1,88 @@
+{
+  "model": "hexgrad/Kokoro-82M",
+  "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "voice": "af_sarah",
+  "user_selected": true,
+  "sample_rate": 24000,
+  "speech_speed": 1.0,
+  "duration": 113.12,
+  "caption_timing": "Kokoro predicted token durations",
+  "video_alignment": "Original actions retain their timing; extra narration holds the last frame of a scene.",
+  "packages": {
+    "kokoro": "0.9.4",
+    "torch": "2.13.0",
+    "transformers": "4.51.3",
+    "misaki": "0.9.4",
+    "spacy": "3.8.16"
+  },
+  "sha256": {
+    "kokoro-v1_0.pth": "496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4",
+    "voices/af_sarah.pt": "49bd364ea3be9eb3e9685e8f9a15448c4883112a7c0ff7ab139fa4088b08cef9"
+  },
+  "scenes": [
+    {
+      "name": "problem",
+      "start": 0.0,
+      "end": 9.36,
+      "source_start": 0,
+      "source_end": 9.3365074,
+      "text": "One sentence can hold a promise. A week later, it can be hard to remember who said it, or when."
+    },
+    {
+      "name": "import",
+      "start": 9.36,
+      "end": 21.52,
+      "source_start": 9.3365074,
+      "source_end": 21.478107,
+      "text": "Here, a researcher brings in a week of meeting notes. The sample is synthetic, and its source date is included so relative timing can be handled carefully."
+    },
+    {
+      "name": "extraction",
+      "start": 21.52,
+      "end": 34.36,
+      "source_start": 21.478107,
+      "source_end": 34.283904,
+      "text": "The notes stay on this device. Qwen runs through local Ollama and finds three possible commitments: a field report, cleaned survey figures, and a conditional appendix."
+    },
+    {
+      "name": "evidence",
+      "start": 34.36,
+      "end": 48.36,
+      "source_start": 34.283904,
+      "source_end": 46.413671300000004,
+      "text": "Each suggestion keeps its exact source quote in view. The already-sent consent forms and a vague thought about a conference are left out. A matching quote is evidence to check, not proof that a promise is correct."
+    },
+    {
+      "name": "review",
+      "start": 48.36,
+      "end": 64.84,
+      "source_start": 46.413671300000004,
+      "source_end": 62.5731493,
+      "text": "The researcher checks the evidence and approves the overdue report. The dashboard now shows one confirmed promise past its date, while two suggestions wait for review. Human approval turns a possible obligation into an action worth following up."
+    },
+    {
+      "name": "followup",
+      "start": 64.84,
+      "end": 80.96,
+      "source_start": 62.5731493,
+      "source_end": 78.6816507,
+      "text": "PromiseKeeper prepares a polite follow-up that the researcher can edit. It is only a draft. Nothing is sent automatically. The original date is a question to confirm, and the recipient can explain if the timing has changed."
+    },
+    {
+      "name": "evaluation",
+      "start": 80.96,
+      "end": 101.96,
+      "source_start": 78.6816507,
+      "source_end": 86.715224,
+      "text": "In a measured run on fifty-five authored synthetic examples, commitment labels reached forty true positives with no false positives or misses. Owner matches were thirty of thirty-five; explicit dates were five of five. These numbers describe this small synthetic set, not real-world accuracy or time saved."
+    },
+    {
+      "name": "privacy",
+      "start": 101.96,
+      "end": 113.12,
+      "source_start": 86.715224,
+      "source_end": 94.4,
+      "text": "Your conversations remain yours to review and remove. PromiseKeeper keeps the evidence close, the next step visible, and the final decision in human hands."
+    }
+  ]
+}

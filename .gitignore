@@ -1,0 +1,15 @@
+node_modules/
+.tools/
+.venv/
+.next/
+*.tsbuildinfo
+__pycache__/
+.pytest_cache/
+*.py[cod]
+backend/promisekeeper.db
+.env
+.env.*
+!.env.example
+demo/assets/video/*.mp4
+demo/assets/video/*.webm
+demo/assets/audio/*.wav

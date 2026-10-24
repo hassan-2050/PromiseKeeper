@@ -1,0 +1,127 @@
+1
+00:00:00,775 --> 00:00:05,049
+One sentence can hold a promise. A week
+later, it can be hard to remember
+
+2
+00:00:05,050 --> 00:00:06,925
+who said it, or when.
+
+3
+00:00:10,110 --> 00:00:14,109
+Here, a researcher brings in a week of
+meeting notes. The sample is
+
+4
+00:00:14,110 --> 00:00:18,059
+synthetic, and its source date is included
+so relative timing can be
+
+5
+00:00:18,060 --> 00:00:19,760
+handled carefully.
+
+6
+00:00:22,270 --> 00:00:26,356
+The notes stay on this device. Qwen runs
+through local Ollama and finds
+
+7
+00:00:26,358 --> 00:00:30,619
+three possible commitments: a field report,
+cleaned survey figures, and a
+
+8
+00:00:30,620 --> 00:00:32,470
+conditional appendix.
+
+9
+00:00:35,110 --> 00:00:39,159
+Each suggestion keeps its exact source
+quote in view. The already-sent
+
+10
+00:00:39,160 --> 00:00:43,059
+consent forms and a vague thought about a
+conference are left out. A
+
+11
+00:00:43,060 --> 00:00:47,835
+matching quote is evidence to check, not
+proof that a promise is correct.
+
+12
+00:00:49,110 --> 00:00:53,234
+The researcher checks the evidence and
+approves the overdue report. The
+
+13
+00:00:53,235 --> 00:00:57,334
+dashboard now shows one confirmed promise
+past its date, while two
+
+14
+00:00:57,335 --> 00:01:01,896
+suggestions wait for review. Human approval
+turns a possible obligation
+
+15
+00:01:01,897 --> 00:01:04,310
+into an action worth following up.
+
+16
+00:01:05,565 --> 00:01:09,551
+PromiseKeeper prepares a polite follow-up
+that the researcher can edit. It
+
+17
+00:01:09,552 --> 00:01:14,202
+is only a draft. Nothing is sent
+automatically. The original date
+
+18
+00:01:14,202 --> 00:01:18,076
+is a question to confirm, and the recipient
+can explain if the timing has
+
+19
+00:01:18,078 --> 00:01:19,340
+changed.
+
+20
+00:01:21,735 --> 00:01:25,634
+In a measured run on fifty-five authored
+synthetic examples, commitment
+
+21
+00:01:25,635 --> 00:01:30,122
+labels reached forty true positives with no
+false positives or misses.
+
+22
+00:01:30,122 --> 00:01:34,959
+Owner matches were thirty of thirty-five;
+explicit dates were five of five
+
+23
+00:01:34,960 --> 00:01:39,721
+. These numbers describe this small
+synthetic set, not real-world accuracy
+
+24
+00:01:39,722 --> 00:01:41,435
+or time saved.
+
+25
+00:01:42,710 --> 00:01:47,246
+Your conversations remain yours to review
+and remove. PromiseKeeper keeps
+
+26
+00:01:47,248 --> 00:01:51,384
+the evidence close, the next step visible,
+and the final decision in human
+
+27
+00:01:51,385 --> 00:01:52,585
+hands.

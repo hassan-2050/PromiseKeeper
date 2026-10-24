@@ -21,4 +21,4 @@ Create a separate Python environment and install `demo/requirements.txt`. With F
 
 Original browser actions retain their recorded timing. The renderer holds a scene's final frame when its narration needs more time; the extra holds are documented in provenance. No processing speed or saved-hours claim is derived from the edited runtime.
 
-See `docs/DEMO_VERIFICATION.md` for verification. Source and screenshots are published in `hassan-2050/PromiseKeeper`. The user supplied the refreshed demo URL: https://www.youtube.com/watch?v=rhyfJHkMmrs. YouTube oEmbed verified the title and usable video ID. The DEV article contains the embed and awaits the user's review.
+See `docs/DEMO_VERIFICATION.md` for verification. Source and screenshots are published in `hassan-2050/PromiseKeeper`. The user supplied the refreshed demo URL: https://www.youtube.com/watch?v=rhyfJHkMmrs. YouTube oEmbed verified the title and usable video ID. The user published the [DEV article](https://dev.to/hassan_shah_733ea1eb37c88/i-built-an-ai-that-remembers-the-promises-we-forget-9db); its YouTube embed is present. See `docs/PUBLICATION_VERIFICATION.md` for the pending screenshot formatting fix.

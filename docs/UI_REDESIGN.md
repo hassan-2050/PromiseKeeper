@@ -26,7 +26,7 @@ The backend extraction and measured 55-case evaluation are unchanged. The evalua
 
 ## Demo handoff
 
-The previous interface's video, screenshots and local workspace were backed up under ignored `.tools/ui-v1/` before replacement. The refreshed recording uses the real production UI, backend and local Qwen model with labelled synthetic notes. Sarah remains the approved Kokoro voice. The user supplied https://www.youtube.com/watch?v=rhyfJHkMmrs; its YouTube oEmbed response verified the title and usable video ID. The DEV article includes the new embed and awaits the user's review.
+The previous interface's video, screenshots and local workspace were backed up under ignored `.tools/ui-v1/` before replacement. The refreshed recording uses the real production UI, backend and local Qwen model with labelled synthetic notes. Sarah remains the approved Kokoro voice. The user supplied https://www.youtube.com/watch?v=rhyfJHkMmrs; its YouTube oEmbed response verified the title and usable video ID. The user published the [DEV article](https://dev.to/hassan_shah_733ea1eb37c88/i-built-an-ai-that-remembers-the-promises-we-forget-9db); its YouTube embed is present. See `docs/PUBLICATION_VERIFICATION.md` for the pending screenshot formatting fix.
 
 The new silent recording lasts 91.00 seconds; the captioned narrated video lasts 112.36 seconds at 1920x1080. Audio/video durations match, all 27 saved caption cues reproduce the narration text, and the complete video decoded through FFmpeg. Local speech recognition recovered all spoken evaluation figures. The final video SHA-256 is `95a24c3217b73eb9742078f67ba2f64fa82162c3251fde34ec99d01a4ecad2ed`.
 

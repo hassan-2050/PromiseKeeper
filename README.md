@@ -2,6 +2,8 @@
 
 PromiseKeeper is a local-first, evidence-led assistant for conversational commitments. Import notes, review suggestions with their exact source quote, approve what is real, and prepare follow-up drafts for a person to edit. It never sends messages.
 
+[Read the published DEV article](https://dev.to/hassan_shah_733ea1eb37c88/i-built-an-ai-that-remembers-the-promises-we-forget-9db).
+
 ![Actual PromiseKeeper dashboard after reviewing synthetic notes](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/ca7f7f1b4ee8bb53049e8db88cf647e37728fe10/demo/assets/screenshots/overdue-dashboard.png)
 
 ## Run locally
@@ -33,7 +35,7 @@ The captured browser journey uses real local Qwen inference on explicitly synthe
 
 To record again, use a fresh local demo database, start the services (the recording defaults to web port 3001), install Chrome and Playwright's video helper (`npx playwright install ffmpeg`), and run `npm run demo:record`. Set `DEMO_WEB_URL` to use another web port. The script captures input notes, actual extraction, evidence review, approval, the overdue dashboard, a follow-up draft and privacy controls, then writes `scene_timing.json`.
 
-For narration, create a separate Python environment, install `demo/requirements.txt`, ensure FFmpeg/ffprobe are on PATH, and run `python demo/narrate_demo.py --voice af_sarah`. The script downloads the official Kokoro-82M revision recorded in provenance, uses natural speech at speed 1.0, holds a scene's final frame when extra narration time is needed, and renders the final MP4. The recording and narration scripts are included; media outputs are local artifacts. Source and screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The user-supplied YouTube URL was verified through YouTube oEmbed and is embedded in `docs/DEV_SUBMISSION.md`, ready for the user's article review.
+For narration, create a separate Python environment, install `demo/requirements.txt`, ensure FFmpeg/ffprobe are on PATH, and run `python demo/narrate_demo.py --voice af_sarah`. The script downloads the official Kokoro-82M revision recorded in provenance, uses natural speech at speed 1.0, holds a scene's final frame when extra narration time is needed, and renders the final MP4. The recording and narration scripts are included; media outputs are local artifacts. Source and screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The verified user-supplied YouTube URL is embedded in `docs/DEV_SUBMISSION.md` and the published article. See [publication verification](docs/PUBLICATION_VERIFICATION.md) for the remaining screenshot formatting fix on DEV.
 
 ## UI verification
 

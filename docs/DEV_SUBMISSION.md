@@ -1,5 +1,3 @@
-**PENDING MATCHING DEMO UPLOAD:** The UI, screenshots and local narrated video have been refreshed. The new video needs a user-supplied YouTube URL before this article is ready for final review.
-
 Title: I Built an AI That Remembers the Promises We Forget
 
 Tags: `devchallenge`, `hf26challenge`, `opensource`, `ai`
@@ -28,7 +26,9 @@ I designed the workspace around reading and deciding: a left sidebar, vertically
 
 ## Demo
 
-The redesigned interface has a new 112.36-second, 1920x1080 recording narrated by genuine Kokoro-82M using `af_sarah`. It is saved at `demo/assets/video/final_demo.mp4` and awaits a matching public YouTube upload. The previous upload shows the earlier interface and will not be presented as the refreshed demo.
+{% youtube rhyfJHkMmrs %}
+
+[Watch the demo on YouTube](https://www.youtube.com/watch?v=rhyfJHkMmrs). The redesigned interface is demonstrated in a 112.36-second, 1920x1080 recording narrated by genuine Kokoro-82M using `af_sarah`. The local export is saved at `demo/assets/video/final_demo.mp4`.
 
 The recording follows a researcher importing five snippets of synthetic notes. Actual local Qwen inference finds three candidates: a revised field report, cleaned survey figures, and a conditional appendix. The already-delivered consent forms and vague conference thought stay out of the action queue.
 

@@ -29,4 +29,4 @@ ffmpeg -v error -i demo/assets/video/final_demo.mp4 -f null -
 ffmpeg -hide_banner -i demo/assets/audio/kokoro_voiceover.wav -af volumedetect -f null -
 ```
 
-Source and actual screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The previous interface's YouTube upload is [https://www.youtube.com/watch?v=iBQeWlr3Vbk](https://www.youtube.com/watch?v=iBQeWlr3Vbk); it was verified through YouTube oEmbed but does not show the redesign. The refreshed local video requires a new user upload and actual URL before the DEV article can embed a matching demonstration.
+Source and actual screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The user supplied the [refreshed demo on YouTube](https://www.youtube.com/watch?v=rhyfJHkMmrs). YouTube oEmbed returned HTTP 200, title `promise keeper`, and embed HTML containing video ID `rhyfJHkMmrs`. This verifies that the supplied video is available for embedding; it does not establish byte equality with the local export. The DEV article now includes this embed and awaits the user's review.

@@ -2,7 +2,7 @@
 
 PromiseKeeper is a local-first, evidence-led assistant for conversational commitments. Import notes, review suggestions with their exact source quote, approve what is real, and prepare follow-up drafts for a person to edit. It never sends messages.
 
-![Actual PromiseKeeper dashboard after reviewing synthetic notes](demo/assets/screenshots/overdue-dashboard.png)
+![Actual PromiseKeeper dashboard after reviewing synthetic notes](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/overdue-dashboard.png)
 
 ## Run locally
 
@@ -31,7 +31,7 @@ The captured browser journey uses real local Qwen inference on explicitly synthe
 
 To record again, use a fresh local demo database, start the services (the recording defaults to web port 3001), install Chrome and Playwright's video helper (`npx playwright install ffmpeg`), and run `npm run demo:record`. Set `DEMO_WEB_URL` to use another web port. The script captures input notes, actual extraction, evidence review, approval, the overdue dashboard, a follow-up draft and privacy controls, then writes `scene_timing.json`.
 
-For narration, create a separate Python environment, install `demo/requirements.txt`, ensure FFmpeg/ffprobe are on PATH, and run `python demo/narrate_demo.py --voice af_sarah`. The script downloads the official Kokoro-82M revision recorded in provenance, uses natural speech at speed 1.0, holds a scene's final frame when extra narration time is needed, and renders the final MP4. The recording and narration scripts are included; media outputs are local artifacts. GitHub publication is deferred at the user's request, and YouTube upload remains a user handoff.
+For narration, create a separate Python environment, install `demo/requirements.txt`, ensure FFmpeg/ffprobe are on PATH, and run `python demo/narrate_demo.py --voice af_sarah`. The script downloads the official Kokoro-82M revision recorded in provenance, uses natural speech at speed 1.0, holds a scene's final frame when extra narration time is needed, and renders the final MP4. The recording and narration scripts are included; media outputs are local artifacts. Source and screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). YouTube upload remains a user handoff.
 
 ## Data and privacy
 

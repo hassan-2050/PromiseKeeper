@@ -1,4 +1,4 @@
-﻿# Demo script
+# Demo script
 
 **Synthetic example, not an empirical time-saved measurement.** A researcher is waiting for a promised report. Open the actual import screen and paste `demo/synthetic_research_notes.txt`, including its synthetic-data label and the known 2026-10-21 source timestamp. The notes contain an overdue report, an upcoming figures handoff, a conditional appendix, a fulfilled delivery and an unrelated vague thought. Run real local Qwen extraction, inspect the exact evidence, approve the report, and show the overdue count. Prepare an editable follow-up and finish with the privacy controls. No message is sent.
 
@@ -21,4 +21,4 @@ Create a separate Python environment and install `demo/requirements.txt`. With F
 
 Original browser actions retain their recorded timing. The renderer holds a scene's final frame when its narration needs more time; the extra holds are documented in provenance. No processing speed or saved-hours claim is derived from the edited runtime.
 
-See `docs/DEMO_VERIFICATION.md` for verification. GitHub publication is deferred until the end at the user's request. The narrated video is ready for the user's review and YouTube upload.
+See `docs/DEMO_VERIFICATION.md` for verification. Source and screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The narrated video is ready for the user's review and YouTube upload.

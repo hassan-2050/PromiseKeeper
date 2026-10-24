@@ -6,7 +6,7 @@ Title: I Built an AI That Remembers the Promises We Forget
 
 Tags: `devchallenge`, `hf26challenge`, `opensource`, `ai`
 
-The application, screenshots and Sarah-narrated demo are complete. GitHub publication is deferred until the end at the user's request. The video needs the user's YouTube upload and actual URL. Images below are local draft references; final DEV images must use verified public repository URLs. The completed article must be reviewed before publication.
+The application, screenshots and Sarah-narrated demo are complete. The public repository is [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). All screenshot URLs below were verified against their source bytes and pinned to a Git commit. The video still needs the user's YouTube upload and actual URL. The completed article must be reviewed before publication.
 
 ---
 
@@ -34,25 +34,25 @@ The final narrated video is available locally at `demo/assets/video/final_demo.m
 
 The recording follows a researcher importing five snippets of synthetic notes. Actual local Qwen inference finds three candidates: a revised field report, cleaned survey figures, and a conditional appendix. The already-delivered consent forms and vague conference thought stay out of the action queue.
 
-![Synthetic research notes in the actual import screen](../demo/assets/screenshots/input-notes.png)
+![Synthetic research notes in the actual import screen](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/input-notes.png)
 
 The reviewer checks the quotes, approves the report, and sees one confirmed promise past its date. Two suggestions remain available for review.
 
-![Exact source quotes beside the extracted suggestions](../demo/assets/screenshots/evidence-review.png)
+![Exact source quotes beside the extracted suggestions](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/evidence-review.png)
 
-![Dashboard after approving the overdue report](../demo/assets/screenshots/overdue-dashboard.png)
+![Dashboard after approving the overdue report](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/overdue-dashboard.png)
 
 The final action is preparing an editable follow-up. The draft asks whether the recorded timing has shifted; it does not assume the person has failed to deliver.
 
-![An editable follow-up draft that the user must review](../demo/assets/screenshots/reviewed-follow-up.png)
+![An editable follow-up draft that the user must review](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/reviewed-follow-up.png)
 
-![Local model status, export and data deletion controls](../demo/assets/screenshots/privacy-controls.png)
+![Local model status, export and data deletion controls](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/4476d7ee57244d3edf426028e6bdfc9dcea043b2/demo/assets/screenshots/privacy-controls.png)
 
 These are screenshots of the working application. The video preserves the browser's original action timing, with added scene holds for narration. Its edited runtime is not a processing benchmark.
 
 ## Code
 
-The public repository link will be added after the final GitHub handoff. The complete project is currently available in the local workspace, including frontend, backend, evaluation corpus, API tests, browser smoke test, and recording and narration scripts.
+[Browse PromiseKeeper on GitHub](https://github.com/hassan-2050/PromiseKeeper). The repository includes the frontend, backend, synthetic evaluation corpus, API tests, browser smoke test, real application screenshots, and recording and narration scripts. Generated video and WAV files remain local artifacts for the YouTube handoff.
 
 The code is MIT licensed. The selected Qwen model and Kokoro weights have their own licenses and are downloaded separately.
 

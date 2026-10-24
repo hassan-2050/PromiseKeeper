@@ -1,6 +1,6 @@
-﻿# Narrated demo verification
+# Narrated demo verification
 
-The user selected `af_sarah` and deferred GitHub publication until the end. Narration uses genuine `hexgrad/Kokoro-82M`, revision `f3ff3571791e39611d31c381e3a41a3af07b4987`, through Kokoro 0.9.4. No replacement speech service was used.
+The user selected `af_sarah` and approved the public repository `hassan-2050/PromiseKeeper`. Narration uses genuine `hexgrad/Kokoro-82M`, revision `f3ff3571791e39611d31c381e3a41a3af07b4987`, through Kokoro 0.9.4. No replacement speech service was used.
 
 ## Media checks
 
@@ -27,4 +27,4 @@ ffmpeg -v error -i demo/assets/video/final_demo.mp4 -f null -
 ffmpeg -hide_banner -i demo/assets/audio/kokoro_voiceover.wav -af volumedetect -f null -
 ```
 
-External publication is pending. The user must upload the video to YouTube as Public or Unlisted and return the actual URL. GitHub destination selection and publication will happen afterward, per the user's instruction.
+Source and actual screenshots are published at [hassan-2050/PromiseKeeper](https://github.com/hassan-2050/PromiseKeeper). The user must upload the video to YouTube as Public or Unlisted and return the actual URL. The DEV article remains a pending draft until that link is verified and the user reviews it.

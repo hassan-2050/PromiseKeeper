@@ -1,5 +1,7 @@
 # Evaluation
 
+The completed [Tinker experiment](TINKER_EXPERIMENT.md) uses a separate family-disjoint train/validation/test corpus. Its [measured comparison](TINKER_COMPARISON.md) reports improved synthetic-test F1 with owner/date and latency regressions. The 55 cases below are preserved development data, not an independent held-out Tinker benchmark, and their scores are unchanged.
+
 `backend/eval/cases.jsonl` contains 55 synthetic, explicitly labeled cases (five each) across explicit, explicit-date, implicit, vague, conditional, fulfilled, negated, hypothetical, multi-speaker, ambiguous and duplicate categories. These are authored examples, not sampled real conversations. Run `python backend/eval/generate_cases.py` to regenerate them.
 
 ## Measured local run

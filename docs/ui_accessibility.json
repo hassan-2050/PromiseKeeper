@@ -1,13 +1,13 @@
 {
   "tool": "axe-core 4.10.3",
   "scope": "Automated WCAG 2 A/AA and 2.1 AA rules on the listed UI states; not a complete manual accessibility audit.",
-  "checked_at": "2026-10-24T11:50:33.272Z",
+  "checked_at": "2026-10-25T08:05:56.720Z",
   "states": [
     {
       "theme": "light",
       "view": "Overview",
       "violations": 0,
-      "passed_rules": 22,
+      "passed_rules": 21,
       "incomplete_rules": [
         "aria-prohibited-attr",
         "color-contrast"
@@ -17,7 +17,7 @@
       "theme": "light",
       "view": "Review inbox",
       "violations": 0,
-      "passed_rules": 25,
+      "passed_rules": 24,
       "incomplete_rules": []
     },
     {
@@ -33,7 +33,7 @@
       "theme": "light",
       "view": "Timeline",
       "violations": 0,
-      "passed_rules": 22,
+      "passed_rules": 21,
       "incomplete_rules": []
     },
     {
@@ -72,7 +72,7 @@
       "theme": "dark",
       "view": "Overview",
       "violations": 0,
-      "passed_rules": 22,
+      "passed_rules": 21,
       "incomplete_rules": [
         "aria-prohibited-attr",
         "color-contrast"
@@ -82,7 +82,7 @@
       "theme": "dark",
       "view": "Review inbox",
       "violations": 0,
-      "passed_rules": 25,
+      "passed_rules": 24,
       "incomplete_rules": []
     },
     {
@@ -98,7 +98,7 @@
       "theme": "dark",
       "view": "Timeline",
       "violations": 0,
-      "passed_rules": 22,
+      "passed_rules": 21,
       "incomplete_rules": []
     },
     {

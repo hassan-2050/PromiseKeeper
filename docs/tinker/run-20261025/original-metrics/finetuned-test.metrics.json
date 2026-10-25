@@ -1,0 +1,1582 @@
+{
+  "raw": {
+    "cases": 40,
+    "tp": 31,
+    "fp": 4,
+    "fn": 1,
+    "precision": 0.8857142857142857,
+    "recall": 0.96875,
+    "f1": 0.9253731343283582,
+    "owner_accuracy": 0.90625,
+    "owner_correct": 29,
+    "gold_commitments": 32,
+    "known_owner_accuracy": 0.9642857142857143,
+    "known_owner_eligible": 28,
+    "date_accuracy": 0.96875,
+    "date_correct": 31,
+    "known_date_accuracy": 1.0,
+    "known_date_eligible": 2,
+    "output_validity": 1.0,
+    "valid_outputs": 40,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 7.339291037500516,
+    "latency_p95_seconds": 8.166286600004241,
+    "per_category": {
+      "explicit": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "implicit": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "conditional": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "refusal": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "completed": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "hypothetical": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "ambiguous_owner": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "deadline": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "multiple": {
+        "cases": 4,
+        "tp": 7,
+        "fp": 0,
+        "fn": 1
+      },
+      "correction": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "per_case": [
+      {
+        "id": "test-explicit-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "You have my word: I will send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-explicit-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "You have my word: I will send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-explicit-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm committing to send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-explicit-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm committing to send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The vendor packet is on my plate now.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The migration guide is on my plate now.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "take the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "You've got a volunteer for the vendor packet: me.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "take the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "You've got a volunteer for the migration guide: me.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-conditional-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "Unless the launch is cancelled",
+            "certainty": "suggested",
+            "evidence": "Unless the launch is cancelled, I will send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-conditional-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "Unless the launch is cancelled",
+            "certainty": "suggested",
+            "evidence": "Unless the launch is cancelled, I will send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-conditional-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "if the committee votes yes",
+            "certainty": "suggested",
+            "evidence": "If the committee votes yes, the vendor packet is mine to send.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-conditional-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "if the committee votes yes",
+            "certainty": "suggested",
+            "evidence": "If the committee votes yes, the migration guide is mine to send.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-3-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "remove my name from the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Please remove my name from the vendor packet. I am not agreeing to send it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-3-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "remove my name from the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Please remove my name from the migration guide. I am not agreeing to send it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-refusal-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-completed-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-completed-3-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "For the record, the migration guide went out last night. That closes it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-completed-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-completed-4-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The tracker marks the migration guide complete. It reached everyone an hour ago.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-hypothetical-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-ambiguous_owner-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Sending the vendor packet is mandatory. We haven't decided who does it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Sending the migration guide is mandatory. We haven't decided who does it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The vendor packet needs an accountable sender. That seat is vacant.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The migration guide needs an accountable sender. That seat is vacant.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": "2026-11-12",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the vendor packet by 2026-11-12.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": "2026-11-13",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the migration guide by 2026-11-13.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the vendor packet tomorrow.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the migration guide tomorrow.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the incident digest",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll review the incident digest.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-3-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll review the access matrix.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "Prepare the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me for the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-4-0",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "reviewing the incident digest",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for reviewing the incident digest.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "sending the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for sending the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-4-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "reviewing the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for reviewing the access matrix.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "sending the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for sending the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Put my name down to send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Put my name down to send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm the one who will send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm the one who will send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      }
+    ]
+  },
+  "pipeline": {
+    "cases": 40,
+    "tp": 31,
+    "fp": 4,
+    "fn": 1,
+    "precision": 0.8857142857142857,
+    "recall": 0.96875,
+    "f1": 0.9253731343283582,
+    "owner_accuracy": 0.90625,
+    "owner_correct": 29,
+    "gold_commitments": 32,
+    "known_owner_accuracy": 0.9642857142857143,
+    "known_owner_eligible": 28,
+    "date_accuracy": 0.96875,
+    "date_correct": 31,
+    "known_date_accuracy": 1.0,
+    "known_date_eligible": 2,
+    "output_validity": 1.0,
+    "valid_outputs": 40,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 7.339291037500516,
+    "latency_p95_seconds": 8.166286600004241,
+    "per_category": {
+      "explicit": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "implicit": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "conditional": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "refusal": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "completed": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "hypothetical": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "ambiguous_owner": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "deadline": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "multiple": {
+        "cases": 4,
+        "tp": 7,
+        "fp": 0,
+        "fn": 1
+      },
+      "correction": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "per_case": [
+      {
+        "id": "test-explicit-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "You have my word: I will send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-explicit-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "You have my word: I will send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-explicit-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm committing to send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-explicit-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm committing to send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The vendor packet is on my plate now.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The migration guide is on my plate now.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "take the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "You've got a volunteer for the vendor packet: me.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "take the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "You've got a volunteer for the migration guide: me.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-conditional-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "Unless the launch is cancelled",
+            "certainty": "suggested",
+            "evidence": "Unless the launch is cancelled, I will send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-conditional-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "Unless the launch is cancelled",
+            "certainty": "suggested",
+            "evidence": "Unless the launch is cancelled, I will send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-conditional-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "if the committee votes yes",
+            "certainty": "suggested",
+            "evidence": "If the committee votes yes, the vendor packet is mine to send.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-conditional-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "if the committee votes yes",
+            "certainty": "suggested",
+            "evidence": "If the committee votes yes, the migration guide is mine to send.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-3-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "remove my name from the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Please remove my name from the vendor packet. I am not agreeing to send it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-3-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "remove my name from the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Please remove my name from the migration guide. I am not agreeing to send it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-refusal-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-completed-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-completed-3-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "For the record, the migration guide went out last night. That closes it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-completed-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-completed-4-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The tracker marks the migration guide complete. It reached everyone an hour ago.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-hypothetical-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "test-ambiguous_owner-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Sending the vendor packet is mandatory. We haven't decided who does it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Sending the migration guide is mandatory. We haven't decided who does it.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The vendor packet needs an accountable sender. That seat is vacant.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The migration guide needs an accountable sender. That seat is vacant.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": "2026-11-12",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the vendor packet by 2026-11-12.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": "2026-11-13",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the migration guide by 2026-11-13.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the vendor packet tomorrow.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the migration guide tomorrow.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the incident digest",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll review the incident digest.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-3-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Review the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll review the access matrix.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "Prepare the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me for the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-4-0",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "reviewing the incident digest",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for reviewing the incident digest.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "sending the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for sending the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-4-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "reviewing the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for reviewing the access matrix.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "sending the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for sending the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Put my name down to send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Put my name down to send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm the one who will send the vendor packet.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the migration guide",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm the one who will send the migration guide.",
+            "action": "Review this commitment"
+          }
+        ]
+      }
+    ]
+  }
+}

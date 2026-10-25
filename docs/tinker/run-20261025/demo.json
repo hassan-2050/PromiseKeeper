@@ -1,0 +1,51 @@
+{
+  "id": "demo-messy-handoff",
+  "synthetic": true,
+  "category": "demo",
+  "text": "Synthetic handoff, noisy meeting notes\nAmina: I sent last month's vendor packet already.\nBilal: A new packet could be useful, but I haven't agreed to one.\nCleo: Leave the migration guide with me.\nDario: If security signs off, I'll review the access matrix by 2026-11-18.\nAmina: Someone still needs to send the incident digest. Owner undecided.",
+  "source_timestamp": null,
+  "gold": [
+    {
+      "claim": "handle the migration guide",
+      "owner": "Cleo",
+      "recipient": null,
+      "deadline": null,
+      "conditionality": null,
+      "certainty": "suggested",
+      "evidence": "Leave the migration guide with me.",
+      "action": "Review this commitment",
+      "match_terms": [
+        "migration",
+        "guide"
+      ]
+    },
+    {
+      "claim": "review the access matrix",
+      "owner": "Dario",
+      "recipient": null,
+      "deadline": "2026-11-18",
+      "conditionality": "security signs off",
+      "certainty": "suggested",
+      "evidence": "If security signs off, I'll review the access matrix by 2026-11-18.",
+      "action": "Review this commitment",
+      "match_terms": [
+        "access",
+        "matrix"
+      ]
+    },
+    {
+      "claim": "send the incident digest",
+      "owner": null,
+      "recipient": null,
+      "deadline": null,
+      "conditionality": null,
+      "certainty": "ambiguous",
+      "evidence": "Someone still needs to send the incident digest. Owner undecided.",
+      "action": "Review this commitment",
+      "match_terms": [
+        "incident",
+        "digest"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+1
+00:00:00,750 --> 00:00:04,924
+This is a real Tinker fine-tuning
+experiment with Qwen three, eight B. On
+
+2
+00:00:04,925 --> 00:00:09,499
+forty held-out synthetic examples, pipeline
+F one rose from point eight six
+
+3
+00:00:09,500 --> 00:00:14,012
+five to point nine two five. Precision
+improved, but recall,
+
+4
+00:00:14,013 --> 00:00:18,386
+owner accuracy, and measured latency
+regressed. These results do not
+
+5
+00:00:18,388 --> 00:00:20,875
+establish real-world accuracy.
+
+6
+00:00:22,150 --> 00:00:27,149
+Here is one illustrative refusal, selected
+after evaluation. The baseline
+
+7
+00:00:27,150 --> 00:00:31,749
+treated, Not this time, my answer is no, as
+a possible commitment.
+
+8
+00:00:31,750 --> 00:00:36,274
+Its exact output is preserved alongside
+every other test response
+
+9
+00:00:36,275 --> 00:00:36,550
+.
+
+10
+00:00:37,805 --> 00:00:41,429
+The selected checkpoint returned an empty
+commitment list for the same
+
+11
+00:00:41,430 --> 00:00:45,942
+refusal. That removes this false positive.
+The full comparison
+
+12
+00:00:45,942 --> 00:00:49,755
+still includes the tuned model's mistakes
+and regressions.
+
+13
+00:00:51,030 --> 00:00:55,216
+The normal application still uses local
+Ollama. This separate research
+
+14
+00:00:55,218 --> 00:00:59,804
+preview accepts only frozen synthetic
+examples. Sending a source to
+
+15
+00:00:59,805 --> 00:01:04,454
+Tinker requires an explicit checkbox for
+each import. The notes shown
+
+16
+00:01:04,455 --> 00:01:06,930
+here were authored for the experiment.
+
+17
+00:01:08,190 --> 00:01:12,364
+This import makes a fresh request to the
+actual saved checkpoint. It does
+
+18
+00:01:12,365 --> 00:01:16,914
+not replay an extraction. The connection
+was warmed before recording,
+
+19
+00:01:16,915 --> 00:01:21,864
+and scene holds support narration, so this
+video is not a latency benchmark
+
+20
+00:01:21,865 --> 00:01:22,140
+.
+
+21
+00:01:23,390 --> 00:01:26,689
+Both models missed Cleo's migration guide
+commitment in this messy
+
+22
+00:01:26,690 --> 00:01:31,389
+transcript. The suggestions they did find
+retain literal source quotes
+
+23
+00:01:31,390 --> 00:01:35,064
+. In this simulated review, the person
+keeps the security sign-off
+
+24
+00:01:35,065 --> 00:01:39,214
+condition visible and checks Dario's
+ownership. A matching quote
+
+25
+00:01:39,215 --> 00:01:42,415
+establishes provenance, not correctness.
+
+26
+00:01:43,670 --> 00:01:47,294
+Only after that review does the person
+approve the commitment and prepare a
+
+27
+00:01:47,295 --> 00:01:52,444
+follow-up. The message stays editable.
+Nothing is sent automatically
+
+28
+00:01:52,445 --> 00:01:56,294
+. The approval boundary remains part of
+PromiseKeeper, whichever model
+
+29
+00:01:56,295 --> 00:01:58,370
+proposes the suggestion.
+
+30
+00:01:59,630 --> 00:02:04,154
+Cloud processing is disclosed here.
+Deleting a local source does not delete
+
+31
+00:02:04,155 --> 00:02:08,766
+provider records. This checkpoint improved
+synthetic-test F one, but
+
+32
+00:02:08,767 --> 00:02:13,391
+its owner and date regressions prevent
+production activation. The report,
+
+33
+00:02:13,392 --> 00:02:17,854
+raw responses, training logs, and estimated
+token costs preserve the
+
+34
+00:02:17,855 --> 00:02:19,480
+complete result.

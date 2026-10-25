@@ -114,14 +114,28 @@ def synthesize(sections, voice: str):
 
 
 def main():
+    global AUDIO, VIDEO, CACHE
     parser = argparse.ArgumentParser()
     parser.add_argument("--voice", required=True, help="User-selected official Kokoro voice")
     parser.add_argument("--render-only", action="store_true")
+    parser.add_argument("--sections", type=Path, default=ROOT / "demo/narration_sections.json")
+    parser.add_argument("--assets-dir", type=Path)
+    parser.add_argument("--cache-dir", type=Path)
+    parser.add_argument("--min-duration", type=float, default=90)
+    parser.add_argument("--max-duration", type=float, default=150)
+    parser.add_argument("--title", default="PromiseKeeper | Local AI, human review")
+    parser.add_argument("--scene-end-trim", type=float, default=0,
+                        help="Trim boundary frames before holding a scene (seconds)")
     args = parser.parse_args()
     if args.voice != "af_sarah":
         raise SystemExit("This project's approved voice is af_sarah. Obtain a new user choice before changing it.")
+    if args.assets_dir:
+        assets = (ROOT / args.assets_dir).resolve()
+        AUDIO, VIDEO = assets / "audio", assets / "video"
+    if args.cache_dir:
+        CACHE = (ROOT / args.cache_dir).resolve()
     for p in [AUDIO, VIDEO, CACHE]: p.mkdir(parents=True, exist_ok=True)
-    sections = json.loads((ROOT/"demo/narration_sections.json").read_text(encoding="utf8"))
+    sections = json.loads(args.sections.read_text(encoding="utf8"))
     timing = json.loads((VIDEO/"scene_timing.json").read_text(encoding="utf8"))
     scenes = {x["name"]:x for x in timing["scenes"]}
     if not args.render_only:
@@ -134,7 +148,7 @@ def main():
         speech = np.load(cache)["audio"]
         meta = json.loads(cache.with_suffix(".json").read_text(encoding="utf8"))
         scene = scenes[section["name"]]
-        source_duration = scene["end"]-scene["start"]
+        source_duration = max(.1, scene["end"]-scene["start"]-args.scene_end_trim)
         duration = math.ceil(max(source_duration, len(speech)/SR+.8)*FPS)/FPS
         lead = .3
         padded = np.zeros(round(duration*SR),dtype=np.float32)
@@ -148,10 +162,10 @@ def main():
             "-t",str(duration),"-c:v","libx264","-preset","fast","-crf","18","-pix_fmt","yuv420p",str(clip))
         clips.append(clip)
         timeline.append({"name":section["name"],"start":round(offset,3),"end":round(offset+duration,3),
-                         "source_start":scene["start"],"source_end":scene["end"],"text":section["text"]})
+                         "source_start":scene["start"],"source_end":scene["start"]+source_duration,"text":section["text"]})
         offset += duration
-    if not 90 <= offset <= 150:
-        raise ValueError(f"Narrated runtime {offset}s is outside the 90–150s target")
+    if not args.min_duration <= offset <= args.max_duration:
+        raise ValueError(f"Narrated runtime {offset}s is outside the requested duration target")
     raw_audio = np.concatenate(audio_pieces)
     peak = float(np.max(np.abs(raw_audio)))
     if peak > .97: raw_audio *= .97/peak
@@ -173,12 +187,13 @@ def main():
     # Captions are burned in for cross-platform readability and included as a selectable track.
     style = "FontName=Arial,FontSize=15,PrimaryColour=&H00FFFFFF,OutlineColour=&H40141414,BorderStyle=3,Outline=1.5,Shadow=0,MarginV=16"
     run("ffmpeg","-y","-v","error","-i",str(joined),"-i",str(AUDIO/"kokoro_voiceover.wav"),"-i",str(AUDIO/"subtitles.srt"),
-        "-map","0:v:0","-map","1:a:0","-map","2:0","-vf",f"subtitles=demo/assets/audio/subtitles.srt:force_style='{style}'",
+        "-map","0:v:0","-map","1:a:0","-map","2:0","-vf",f"subtitles={(AUDIO/'subtitles.srt').relative_to(ROOT).as_posix()}:force_style='{style}'",
         "-c:v","libx264","-crf","18","-preset","fast","-pix_fmt","yuv420p","-c:a","aac","-b:a","192k","-c:s","mov_text",
-        "-metadata:s:s:0","language=eng","-metadata","title=PromiseKeeper | Local AI, human review","-t",str(offset),"-movflags","+faststart",str(VIDEO/"final_demo.mp4"))
+        "-metadata:s:s:0","language=eng","-metadata",f"title={args.title}","-t",str(offset),"-movflags","+faststart",str(VIDEO/"final_demo.mp4"))
     provenance = {"model":REPO,"revision":REVISION,"voice":args.voice,"user_selected":True,
                   "sample_rate":SR,"speech_speed":1.0,"duration":round(offset,3),"caption_timing":"Kokoro predicted token durations",
                   "video_alignment":"Original actions retain their timing; extra narration holds the last frame of a scene.",
+                  "scene_end_trim_seconds":args.scene_end_trim,
                   "packages":{p:importlib.metadata.version(p) for p in ["kokoro","torch","transformers","misaki","spacy"]},
                   "sha256":{f:hashlib.sha256((MODEL_DIR/f).read_bytes()).hexdigest() for f in ["kokoro-v1_0.pth",f"voices/{args.voice}.pt"]},
                   "scenes":timeline}

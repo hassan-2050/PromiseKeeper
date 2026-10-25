@@ -1,0 +1,41 @@
+<!doctype html><html lang='en'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>PromiseKeeper · Tinker experiment</title><style>body{margin:3rem auto;max-width:960px;padding:0 1.2rem;background:#101b17;color:#e4f5eb;font:17px/1.6 system-ui}h1,h2,summary{color:#a2e5bf}table{border-collapse:collapse;width:100%;margin-bottom:2rem}td,th{border-bottom:1px solid #456353;padding:.6rem;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#192b22;padding:1rem;border-radius:8px;font-size:14px;line-height:1.35}summary{cursor:pointer}a{color:#a2e5bf}</style><h1>PromiseKeeper · Tinker experiment</h1><p>Measured results on a small authored synthetic held-out set. Review required.</p><p>Model: Qwen/Qwen3-8B<br>Checkpoint: tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-1</p><h2>Pipeline results</h2><table><thead><tr><th>Metric</th><th>Baseline</th><th>Fine-tuned</th></tr></thead><tbody><tr><th scope='row'>Precision</th><td>0.7619</td><td>0.8857</td></tr><tr><th scope='row'>Recall</th><td>1.0000</td><td>0.9688</td></tr><tr><th scope='row'>F1</th><td>0.8649</td><td>0.9254</td></tr><tr><th scope='row'>Owner accuracy (all gold commitments)</th><td>1.0000</td><td>0.9062</td></tr><tr><th scope='row'>Owner accuracy (known owners)</th><td>1.0000</td><td>0.9643</td></tr><tr><th scope='row'>Date accuracy (all gold commitments)</th><td>1.0000</td><td>0.9688</td></tr><tr><th scope='row'>Date accuracy (known dates)</th><td>1.0000</td><td>1.0000</td></tr><tr><th scope='row'>Output validity</th><td>0.5250</td><td>1.0000</td></tr><tr><th scope='row'>Raw quote substring rate</th><td>1.0000</td><td>1.0000</td></tr><tr><th scope='row'>Mean latency, seconds</th><td>2.5201</td><td>7.3393</td></tr><tr><th scope='row'>P95 latency, seconds</th><td>2.2854</td><td>8.1663</td></tr></tbody></table><p>Denominators: 32 gold commitments, 28 known owners, 2 known dates.</p><h2>Raw results</h2><table><thead><tr><th>Metric</th><th>Baseline</th><th>Fine-tuned</th></tr></thead><tbody><tr><th scope='row'>Precision</th><td>0.6800</td><td>0.8857</td></tr><tr><th scope='row'>Recall</th><td>0.5312</td><td>0.9688</td></tr><tr><th scope='row'>F1</th><td>0.5965</td><td>0.9254</td></tr><tr><th scope='row'>Owner accuracy (all gold commitments)</th><td>0.5312</td><td>0.9062</td></tr><tr><th scope='row'>Owner accuracy (known owners)</th><td>0.4643</td><td>0.9643</td></tr><tr><th scope='row'>Date accuracy (all gold commitments)</th><td>0.5312</td><td>0.9688</td></tr><tr><th scope='row'>Date accuracy (known dates)</th><td>0.0000</td><td>1.0000</td></tr><tr><th scope='row'>Output validity</th><td>0.5250</td><td>1.0000</td></tr><tr><th scope='row'>Raw quote substring rate</th><td>1.0000</td><td>1.0000</td></tr><tr><th scope='row'>Mean latency, seconds</th><td>2.5201</td><td>7.3393</td></tr><tr><th scope='row'>P95 latency, seconds</th><td>2.2854</td><td>8.1663</td></tr></tbody></table><p>Denominators: 32 gold commitments, 28 known owners, 2 known dates.</p><h2>Costs</h2><p>Actual invoice cost unavailable. See token-usage.json for measured tokens and rate-card estimates, and billing.json for provider usage.</p><section id='illustration'><h2>Illustrative held-out case</h2><p>Selected after evaluation to illustrate one reduction in false positives. This is part of the same test set, not an additional benchmark. The full results include regressions.</p><pre>Bilal: Can we count on you for the vendor packet?
+Amina: Not this time. My answer is no.</pre><details open><summary>Baseline actual output</summary><pre>{
+  &quot;commitments&quot;: [
+    {
+      &quot;claim&quot;: &quot;Not this time. My answer is no.&quot;,
+      &quot;owner&quot;: null,
+      &quot;recipient&quot;: null,
+      &quot;deadline&quot;: null,
+      &quot;conditionality&quot;: null,
+      &quot;certainty&quot;: &quot;ambiguous&quot;,
+      &quot;evidence&quot;: &quot;Not this time. My answer is no.&quot;,
+      &quot;action&quot;: &quot;proposed next action&quot;
+    }
+  ]
+}</pre></details><details open><summary>Finetuned actual output</summary><pre>{&quot;commitments&quot;: []}</pre></details></section><section id='fixed-demo'><h2>Fixed synthetic demo</h2><pre>Synthetic handoff, noisy meeting notes
+Amina: I sent last month&#x27;s vendor packet already.
+Bilal: A new packet could be useful, but I haven&#x27;t agreed to one.
+Cleo: Leave the migration guide with me.
+Dario: If security signs off, I&#x27;ll review the access matrix by 2026-11-18.
+Amina: Someone still needs to send the incident digest. Owner undecided.</pre><details open><summary>Baseline actual output</summary><pre>{
+  &quot;commitments&quot;: [
+    {
+      &quot;claim&quot;: &quot;review the access matrix by 2026-11-18&quot;,
+      &quot;owner&quot;: &quot;Dario&quot;,
+      &quot;recipient&quot;: null,
+      &quot;deadline&quot;: &quot;2026-11-18&quot;,
+      &quot;conditionality&quot;: &quot;conditional&quot;,
+      &quot;certainty&quot;: &quot;suggested&quot;,
+      &quot;evidence&quot;: &quot;If security signs off, I&#x27;ll review the access matrix by 2026-11-18.&quot;
+    },
+    {
+      &quot;claim&quot;: &quot;send the incident digest&quot;,
+      &quot;owner&quot;: null,
+      &quot;recipient&quot;: null,
+      &quot;deadline&quot;: null,
+      &quot;conditionality&quot;: &quot;unconditional&quot;,
+      &quot;certainty&quot;: &quot;ambiguous&quot;,
+      &quot;evidence&quot;: &quot;Someone still needs to send the incident digest. Owner undecided.&quot;
+    }
+  ]
+}</pre></details><details open><summary>Finetuned actual output</summary><pre>{&quot;commitments&quot;: [{&quot;claim&quot;: &quot;review the access matrix&quot;, &quot;owner&quot;: &quot;Dario&quot;, &quot;recipient&quot;: null, &quot;deadline&quot;: &quot;2026-11-18&quot;, &quot;conditionality&quot;: &quot;security signs off&quot;, &quot;certainty&quot;: &quot;suggested&quot;, &quot;evidence&quot;: &quot;If security signs off, I&#x27;ll review the access matrix by 2026-11-18.&quot;, &quot;action&quot;: &quot;Review this commitment&quot;}, {&quot;claim&quot;: &quot;send the incident digest&quot;, &quot;owner&quot;: null, &quot;recipient&quot;: null, &quot;deadline&quot;: null, &quot;conditionality&quot;: null, &quot;certainty&quot;: &quot;ambiguous&quot;, &quot;evidence&quot;: &quot;Someone still needs to send the incident digest. Owner undecided.&quot;, &quot;action&quot;: &quot;Review this commitment&quot;}]}</pre></details></section><p>See comparison.md for scoring rules, limitations and provenance. The app continues to use local Ollama.</p></html>

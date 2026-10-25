@@ -1,0 +1,892 @@
+{
+  "raw": {
+    "scoring_version": 2,
+    "cases": 20,
+    "tp": 16,
+    "fp": 2,
+    "fn": 0,
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1": 0.9411764705882353,
+    "owner_accuracy": 0.875,
+    "owner_correct": 14,
+    "gold_commitments": 16,
+    "known_owner_accuracy": 1.0,
+    "known_owner_eligible": 14,
+    "date_accuracy": 1.0,
+    "date_correct": 16,
+    "known_date_accuracy": 1.0,
+    "known_date_eligible": 4,
+    "output_validity": 1.0,
+    "valid_outputs": 20,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 9.206178515000284,
+    "latency_p95_seconds": 8.187776599996141,
+    "per_category": {
+      "explicit": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "implicit": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "conditional": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "refusal": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "completed": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "hypothetical": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "ambiguous_owner": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "deadline": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "multiple": {
+        "cases": 2,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "correction": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "per_case": [
+      {
+        "id": "validation-explicit-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me to send the release checklist.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-explicit-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me to send the research appendix.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-implicit-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Consider the release checklist my responsibility from here.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-implicit-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Consider the research appendix my responsibility from here.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-conditional-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "access is restored",
+            "certainty": "suggested",
+            "evidence": "Once access is restored, I will send the release checklist.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-conditional-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "access is restored",
+            "certainty": "suggested",
+            "evidence": "Once access is restored, I will send the research appendix.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-refusal-2-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "validation-refusal-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "validation-completed-2-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "validation-completed-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "validation-hypothetical-2-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Maybe me.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-hypothetical-2-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Maybe me.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-ambiguous_owner-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "We still have an obligation to send the release checklist; assignment is unresolved.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-ambiguous_owner-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "We still have an obligation to send the research appendix; assignment is unresolved.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-deadline-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": "2026-10-27",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The release checklist will be in your inbox in 2 days.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-deadline-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": "2026-10-27",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The research appendix will be in your inbox in 2 days.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-multiple-2-0",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I will send the release checklist.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "review the support rota",
+            "owner": "Ivan",
+            "recipient": null,
+            "deadline": "2026-11-12",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I will review the support rota by 2026-11-12.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-multiple-2-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I will send the research appendix.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "review the lab schedule",
+            "owner": "Hugo",
+            "recipient": null,
+            "deadline": "2026-11-13",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I will review the lab schedule by 2026-11-13.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-correction-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Ivan",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm taking responsibility for the release checklist.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-correction-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Hugo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm taking responsibility for the research appendix.",
+            "action": "Review this commitment"
+          }
+        ]
+      }
+    ]
+  },
+  "pipeline": {
+    "scoring_version": 2,
+    "cases": 20,
+    "tp": 16,
+    "fp": 2,
+    "fn": 0,
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1": 0.9411764705882353,
+    "owner_accuracy": 0.875,
+    "owner_correct": 14,
+    "gold_commitments": 16,
+    "known_owner_accuracy": 1.0,
+    "known_owner_eligible": 14,
+    "date_accuracy": 1.0,
+    "date_correct": 16,
+    "known_date_accuracy": 1.0,
+    "known_date_eligible": 4,
+    "output_validity": 1.0,
+    "valid_outputs": 20,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 9.206178515000284,
+    "latency_p95_seconds": 8.187776599996141,
+    "per_category": {
+      "explicit": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "implicit": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "conditional": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "refusal": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "completed": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "hypothetical": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "ambiguous_owner": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "deadline": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "multiple": {
+        "cases": 2,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "correction": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "per_case": [
+      {
+        "id": "validation-explicit-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me to send the release checklist.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-explicit-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me to send the research appendix.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-implicit-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Consider the release checklist my responsibility from here.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-implicit-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Consider the research appendix my responsibility from here.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-conditional-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "access is restored",
+            "certainty": "suggested",
+            "evidence": "Once access is restored, I will send the release checklist.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-conditional-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": "access is restored",
+            "certainty": "suggested",
+            "evidence": "Once access is restored, I will send the research appendix.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-refusal-2-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "validation-refusal-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "validation-completed-2-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "validation-completed-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": []
+      },
+      {
+        "id": "validation-hypothetical-2-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Maybe me.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-hypothetical-2-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Maybe me.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-ambiguous_owner-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "We still have an obligation to send the release checklist; assignment is unresolved.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-ambiguous_owner-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "We still have an obligation to send the research appendix; assignment is unresolved.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-deadline-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": "2026-10-27",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The release checklist will be in your inbox in 2 days.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-deadline-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": "2026-10-27",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The research appendix will be in your inbox in 2 days.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-multiple-2-0",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I will send the release checklist.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "review the support rota",
+            "owner": "Ivan",
+            "recipient": null,
+            "deadline": "2026-11-12",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I will review the support rota by 2026-11-12.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-multiple-2-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Zoe",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I will send the research appendix.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "review the lab schedule",
+            "owner": "Hugo",
+            "recipient": null,
+            "deadline": "2026-11-13",
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I will review the lab schedule by 2026-11-13.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-correction-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Ivan",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm taking responsibility for the release checklist.",
+            "action": "Review this commitment"
+          }
+        ]
+      },
+      {
+        "id": "validation-correction-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the research appendix",
+            "owner": "Hugo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm taking responsibility for the research appendix.",
+            "action": "Review this commitment"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "checked_at": "2026-10-25T07:47:11.459013+00:00",
+  "sdk_version": "0.35.0",
+  "configured_model": "Qwen/Qwen3-8B",
+  "pricing": {
+    "retrieved_at": "2026-10-25T07:47:11.774859+00:00",
+    "source": "https://tinker-docs.thinkingmachines.ai/tinker/models.json",
+    "model": {
+      "name": "Qwen3-8B",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "tinker_id": "Qwen/Qwen3-8B",
+      "type": "Hybrid",
+      "arch": "Dense",
+      "size": "Small",
+      "params": 8200000000,
+      "active_params": 8200000000,
+      "context": "32K",
+      "prefill": "$0.195",
+      "cached_prefill": "$0.039",
+      "sample": "$0.60",
+      "train": "$0.44"
+    },
+    "rates_per_million_usd": {
+      "prefill": 0.195,
+      "cached_prefill": 0.039,
+      "sample": 0.6,
+      "train": 0.44
+    }
+  },
+  "credentials_available": true,
+  "account_models": [
+    {
+      "model_name": "Qwen/Qwen3-8B",
+      "max_context_length": 32768,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.5-35B-A3B-Base",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.5-397B-A17B",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.5-397B-A17B:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.5-4B",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.5-4B:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.5-9B",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.5-9B-Base",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.6-35B-A3B",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.6-35B-A3B:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.8-27B",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "Qwen/Qwen3.8-27B:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "deepseek-ai/DeepSeek-V4.1-Flash-1017:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "deepseek-ai/DeepSeek-V4.1-Flash:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "moonshotai/Kimi-K2.6",
+      "max_context_length": 32768,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "moonshotai/Kimi-K2.6:peft:131072",
+      "max_context_length": 131072,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "openai/gpt-oss-120b",
+      "max_context_length": 32768,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "openai/gpt-oss-120b:peft:131072",
+      "max_context_length": 131072,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "openai/gpt-oss-20b",
+      "max_context_length": 32768,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "thinkingmachines/Inkling",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "thinkingmachines/Inkling-Small",
+      "max_context_length": 65536,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "thinkingmachines/Inkling-Small:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "thinkingmachines/Inkling-Small:peft:262144:sampling-nvfp4",
+      "max_context_length": 262144,
+      "trainable": false,
+      "sampleable": true
+    },
+    {
+      "model_name": "thinkingmachines/Inkling:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "thinkingmachines/Inkling:peft:262144:sampling-nvfp4",
+      "max_context_length": 262144,
+      "trainable": false,
+      "sampleable": true
+    },
+    {
+      "model_name": "zai-org/GLM-5.3-Flash:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    },
+    {
+      "model_name": "zai-org/GLM-5.3:peft:262144",
+      "max_context_length": 262144,
+      "trainable": true,
+      "sampleable": true
+    }
+  ],
+  "account_credits_usd": null,
+  "credit_status": "Claim free Tinker partner credits at https://hacktoberfest.com/my/promos, then verify the balance in Tinker. No paid funding is assumed.",
+  "training_run": "not_started",
+  "status": "ready_for_budget_review"
+}

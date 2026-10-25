@@ -1,0 +1,118 @@
+{
+  "captured_at": "2026-10-25T12:38:40.548810+00:00",
+  "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+  "events": [
+    {
+      "bucket_start": "2026-10-25T07:00:00Z",
+      "bucket_end": "2026-10-25T08:00:00Z",
+      "base_model": "Qwen/Qwen3-8B",
+      "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+      "estimated_cost_usd": 0.0116248,
+      "effective_rate_usd_per_million_tokens": 0.44,
+      "effective_rate_usd_per_gigabyte_month": null,
+      "event_info": {
+        "type": "training",
+        "token_count": 26420
+      }
+    },
+    {
+      "bucket_start": "2026-10-25T07:00:00Z",
+      "bucket_end": "2026-10-25T08:00:00Z",
+      "base_model": "Qwen/Qwen3-8B",
+      "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+      "estimated_cost_usd": 0.000394368,
+      "effective_rate_usd_per_million_tokens": 0.039,
+      "effective_rate_usd_per_gigabyte_month": null,
+      "event_info": {
+        "type": "sampling_prefill",
+        "cached": true,
+        "token_count": 10112
+      }
+    },
+    {
+      "bucket_start": "2026-10-25T07:00:00Z",
+      "bucket_end": "2026-10-25T08:00:00Z",
+      "base_model": "Qwen/Qwen3-8B",
+      "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+      "estimated_cost_usd": 0.0042588,
+      "effective_rate_usd_per_million_tokens": 0.6,
+      "effective_rate_usd_per_gigabyte_month": null,
+      "event_info": {
+        "type": "sampling_sample",
+        "token_count": 7098
+      }
+    },
+    {
+      "bucket_start": "2026-10-25T07:00:00Z",
+      "bucket_end": "2026-10-25T08:00:00Z",
+      "base_model": "Qwen/Qwen3-8B",
+      "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+      "estimated_cost_usd": 0.000910065,
+      "effective_rate_usd_per_million_tokens": 0.195,
+      "effective_rate_usd_per_gigabyte_month": null,
+      "event_info": {
+        "type": "sampling_prefill",
+        "cached": false,
+        "token_count": 4667
+      }
+    },
+    {
+      "bucket_start": "2026-10-25T08:00:00Z",
+      "bucket_end": "2026-10-25T09:00:00Z",
+      "base_model": "Qwen/Qwen3-8B",
+      "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+      "estimated_cost_usd": 0.03790952,
+      "effective_rate_usd_per_million_tokens": 0.44,
+      "effective_rate_usd_per_gigabyte_month": null,
+      "event_info": {
+        "type": "training",
+        "token_count": 86158
+      }
+    },
+    {
+      "bucket_start": "2026-10-25T08:00:00Z",
+      "bucket_end": "2026-10-25T09:00:00Z",
+      "base_model": "Qwen/Qwen3-8B",
+      "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+      "estimated_cost_usd": 0.00067392,
+      "effective_rate_usd_per_million_tokens": 0.039,
+      "effective_rate_usd_per_gigabyte_month": null,
+      "event_info": {
+        "type": "sampling_prefill",
+        "cached": true,
+        "token_count": 17280
+      }
+    },
+    {
+      "bucket_start": "2026-10-25T08:00:00Z",
+      "bucket_end": "2026-10-25T09:00:00Z",
+      "base_model": "Qwen/Qwen3-8B",
+      "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+      "estimated_cost_usd": 0.005532,
+      "effective_rate_usd_per_million_tokens": 0.6,
+      "effective_rate_usd_per_gigabyte_month": null,
+      "event_info": {
+        "type": "sampling_sample",
+        "token_count": 9220
+      }
+    },
+    {
+      "bucket_start": "2026-10-25T08:00:00Z",
+      "bucket_end": "2026-10-25T09:00:00Z",
+      "base_model": "Qwen/Qwen3-8B",
+      "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+      "estimated_cost_usd": 0.00163878,
+      "effective_rate_usd_per_million_tokens": 0.195,
+      "effective_rate_usd_per_gigabyte_month": null,
+      "event_info": {
+        "type": "sampling_prefill",
+        "cached": false,
+        "token_count": 8404
+      }
+    }
+  ],
+  "cost_data_through": null,
+  "actual_invoice_cost_usd": null,
+  "note": "Session-filtered provider usage; estimated gross cost is not the invoice amount. Data may lag hours. Unattributed storage is excluded, not assumed free.",
+  "redaction": "Removed user_id, user_name and project_id; all session usage, rate, model and time fields retained."
+}

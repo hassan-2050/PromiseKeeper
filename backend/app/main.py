@@ -3,14 +3,15 @@ from __future__ import annotations
 import json
 import os
 import re
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Literal
 from uuid import uuid4
 
 import httpx
-from fastapi import FastAPI, HTTPException, UploadFile, File
+from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
+from app.extraction_contract import ExtractedCommitment, build_prompt, non_commitment_quote, resolve_deadline_text
 from pydantic import BaseModel, Field
 from sqlalchemy import create_engine, String, Text, DateTime, Boolean, ForeignKey, select
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship, sessionmaker
@@ -19,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{ROOT / 'promisekeeper.db'}")
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3:8b")
+EXTRACTION_PROVIDER = os.getenv("EXTRACTION_PROVIDER", "ollama")
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {})
 Session = sessionmaker(engine, expire_on_commit=False)
 
@@ -101,16 +103,7 @@ class ImportBody(BaseModel):
     text: str = Field(min_length=1, max_length=200_000)
     name: str = Field(default="Pasted notes", max_length=240)
     source_timestamp: datetime | None = None
-
-class ExtractedCommitment(BaseModel):
-    claim: str = Field(min_length=1, max_length=500)
-    owner: str | None = None
-    recipient: str | None = None
-    deadline: str | None = None
-    conditionality: str | None = None
-    certainty: Literal["suggested", "ambiguous"] = "suggested"
-    evidence: str = Field(min_length=1)
-    action: str = Field(min_length=1)
+    allow_remote_inference: bool = False
 
 class CommitmentPatch(BaseModel):
     claim: str | None = None
@@ -131,45 +124,8 @@ def serialize(c: Commitment):
             "evidence_quotes": [record.quote for record in c.evidence_records] or [c.evidence],
             "created_at": c.created_at.isoformat()}
 
-def non_commitment_quote(quote: str) -> bool:
-    """Conservative lexical gate for clear refusals, completed actions and hypotheticals."""
-    clause = re.split(r"\bbut\b", quote, flags=re.I)[-1].casefold()
-    if re.search(r"\b(?:won['’]?t|will not|can['’]?t|cannot|couldn['’]?t|wouldn['’]?t|not going to|not be able to)\b", clause):
-        return True
-    if re.search(r"\b(?:already\s+)?(?:sent|shared|uploaded|finished|completed|submitted|delivered|provided)\b", clause):
-        return True
-    has_intent = re.search(r"\b(?:i['’]?ll|we['’]?ll|i will|we will|i can|we can|i am going to|we are going to)\b", clause)
-    if re.search(r"\b(?:could|might|would)\b", clause) and not has_intent:
-        return True
-    return False
-
-def resolve_deadline_text(deadline: str | None, source_timestamp: datetime | None) -> str | None:
-    if not deadline:
-        return None
-    has_calendar_date = bool(re.search(r"\b\d{4}-\d{2}-\d{2}\b", deadline))
-    phrase = re.sub(r"^(?:by|on|due)\s+", "", deadline.strip().casefold())
-    relative = re.search(r"\b(?:today|tomorrow|tonight|soon|shortly|later|next\s+(?:week|month|monday|tuesday|wednesday|thursday|friday|saturday|sunday)|this\s+(?:week|monday|tuesday|wednesday|thursday|friday|saturday|sunday)|monday|tuesday|wednesday|thursday|friday|saturday|sunday|in\s+\d+\s+days?)\b", phrase)
-    if not relative or has_calendar_date:
-        return deadline
-    if not source_timestamp:
-        return None
-    base = source_timestamp.date()
-    if re.fullmatch(r"today(?: morning| afternoon| evening)?|tonight", phrase): return base.isoformat()
-    if re.fullmatch(r"tomorrow(?: morning| afternoon| evening)?", phrase): return (base + timedelta(days=1)).isoformat()
-    in_days = re.fullmatch(r"in\s+(\d+)\s+days?", phrase)
-    if in_days: return (base + timedelta(days=int(in_days.group(1)))).isoformat()
-    weekdays = {"monday": 0, "tuesday": 1, "wednesday": 2, "thursday": 3, "friday": 4, "saturday": 5, "sunday": 6}
-    match = re.fullmatch(r"(?:(next|this)\s+)?(monday|tuesday|wednesday|thursday|friday|saturday|sunday)", phrase)
-    if match:
-        modifier, day = match.groups(); delta = (weekdays[day] - base.weekday()) % 7
-        if modifier == "next" and delta == 0: delta = 7
-        if modifier == "this" and delta == 0: delta = 0
-        return (base + timedelta(days=delta)).isoformat()
-    # Vague timing words are never converted into invented calendar dates.
-    return None
-
 async def extract_local(text: str, source_timestamp: datetime | None):
-    prompt = f'''Find only commitments or clear obligations in these notes. A commitment is a person agreeing to do something, or an explicit obligation assigned to them. Ignore negated, hypothetical, sarcastic and already fulfilled statements. Never infer a name/date that is not explicit. Dates such as "tomorrow" may be resolved only when a source timestamp is provided; otherwise leave deadline null. Return strict JSON object {{"commitments":[{{"claim":"short action","owner":null,"recipient":null,"deadline":null,"conditionality":null,"certainty":"suggested|ambiguous","evidence":"verbatim exact source quote","action":"proposed next action"}}]}}. Every quote must be an exact substring of the source. Source timestamp: {source_timestamp.isoformat() if source_timestamp else "unknown"}. Text:\n{text}'''
+    prompt = build_prompt(text, source_timestamp)
     async with httpx.AsyncClient(timeout=180) as client:
         response = await client.post(f"{OLLAMA_URL}/api/generate", json={"model": OLLAMA_MODEL, "prompt": prompt + "\n/no_think", "stream": False, "format": "json", "think": False, "options": {"temperature": 0, "num_predict": 512}})
         response.raise_for_status()
@@ -186,6 +142,17 @@ async def extract_local(text: str, source_timestamp: datetime | None):
 
 @app.get("/api/health")
 async def health():
+    if EXTRACTION_PROVIDER == "tinker":
+        try:
+            from app.tinker_runtime import verified_configuration
+            _, state, plan = verified_configuration()
+            return {"api": "ok", "model": plan["config"]["base_model"], "provider": "tinker", "inference": "remote",
+                    "model_available": True, "requires_remote_consent": True, "ollama_available": False, "model_installed": False,
+                    "research_preview": state["preview_only"], "quality_regressions": state["quality_regressions"],
+                    "checkpoint": state["selected_checkpoint"]["sampler_path"]}
+        except Exception:
+            return {"api": "ok", "model": "Tinker (configuration required)", "provider": "tinker", "inference": "remote",
+                    "model_available": False, "requires_remote_consent": True, "ollama_available": False, "model_installed": False}
     available = False; installed = False
     try:
         async with httpx.AsyncClient(timeout=2) as client:
@@ -198,6 +165,10 @@ async def health():
 @app.post("/api/import")
 async def import_text(body: ImportBody):
     if not body.text.strip(): raise HTTPException(422, "Source text is empty")
+    if EXTRACTION_PROVIDER == "tinker" and not body.allow_remote_inference:
+        raise HTTPException(422, "This extractor sends source text to Tinker. Explicit consent is required for this import.")
+    if EXTRACTION_PROVIDER not in {"ollama", "tinker"}:
+        raise HTTPException(503, "Unknown extraction provider")
     with Session() as db:
         source = SourceDocument(name=body.name, text=body.text, source_timestamp=body.source_timestamp.isoformat() if body.source_timestamp else None)
         db.add(source); db.flush()
@@ -206,9 +177,17 @@ async def import_text(body: ImportBody):
             fragment = SourceFragment(source_id=source.id, ordinal=len(fragments), start_offset=match.start(), end_offset=match.end(), text=match.group().strip())
             db.add(fragment); fragments.append(fragment)
         db.flush()
-        try: items = await extract_local(body.text, body.source_timestamp)
+        try:
+            if EXTRACTION_PROVIDER == "tinker":
+                from app.tinker_runtime import extract_tinker
+                items = await extract_tinker(body.text, body.source_timestamp)
+            else:
+                items = await extract_local(body.text, body.source_timestamp)
         except Exception as exc:
-            db.rollback(); raise HTTPException(503, f"Local model unavailable or returned invalid output: {exc}")
+            from app.tinker_runtime import PreviewSourceError
+            if isinstance(exc, PreviewSourceError):
+                db.rollback(); raise HTTPException(422, str(exc))
+            db.rollback(); raise HTTPException(503, f"Selected model unavailable or returned invalid output: {exc}")
         # Keep the safety boundary at the API layer too: model adapter output is
         # untrusted, and this check remains in force for any future adapter.
         accepted = 0
@@ -237,10 +216,10 @@ async def import_text(body: ImportBody):
         return {"source_id": source.id, "source_name": source.name, "commitments": [serialize(c) for c in source.commitments], "count": accepted}
 
 @app.post("/api/import/file")
-async def import_file(file: UploadFile = File(...)):
+async def import_file(file: UploadFile = File(...), allow_remote_inference: bool = Form(False)):
     if Path(file.filename or "").suffix.lower() not in {".txt", ".md"}: raise HTTPException(415, "Import .txt or .md files")
     content = (await file.read(200_001)).decode("utf-8", errors="replace")
-    return await import_text(ImportBody(text=content, name=file.filename or "Imported notes"))
+    return await import_text(ImportBody(text=content, name=file.filename or "Imported notes", allow_remote_inference=allow_remote_inference))
 
 @app.get("/api/commitments")
 def list_commitments(status: str | None = None, q: str | None = None):

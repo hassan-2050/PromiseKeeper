@@ -1,0 +1,89 @@
+{
+  "model": "hexgrad/Kokoro-82M",
+  "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "voice": "af_sarah",
+  "user_selected": true,
+  "sample_rate": 24000,
+  "speech_speed": 1.0,
+  "duration": 140.0,
+  "caption_timing": "Kokoro predicted token durations",
+  "video_alignment": "Original actions retain their timing; extra narration holds the last frame of a scene.",
+  "scene_end_trim_seconds": 0.6,
+  "packages": {
+    "kokoro": "0.9.4",
+    "torch": "2.13.0",
+    "transformers": "4.51.3",
+    "misaki": "0.9.4",
+    "spacy": "3.8.16"
+  },
+  "sha256": {
+    "kokoro-v1_0.pth": "496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4",
+    "voices/af_sarah.pt": "49bd364ea3be9eb3e9685e8f9a15448c4883112a7c0ff7ab139fa4088b08cef9"
+  },
+  "scenes": [
+    {
+      "name": "comparison",
+      "start": 0.0,
+      "end": 21.4,
+      "source_start": 0,
+      "source_end": 6.562801700000011,
+      "text": "This is a real Tinker fine-tuning experiment with Qwen three, eight B. On forty held-out synthetic examples, pipeline F one rose from point eight six five to point nine two five. Precision improved, but recall, owner accuracy, and measured latency regressed. These results do not establish real-world accuracy."
+    },
+    {
+      "name": "baseline",
+      "start": 21.4,
+      "end": 37.08,
+      "source_start": 7.162801700000011,
+      "source_end": 12.651662200000006,
+      "text": "Here is one illustrative refusal, selected after evaluation. The baseline treated, Not this time, my answer is no, as a possible commitment. Its exact output is preserved alongside every other test response."
+    },
+    {
+      "name": "finetuned",
+      "start": 37.08,
+      "end": 50.28,
+      "source_start": 13.251662200000005,
+      "source_end": 18.727570099999994,
+      "text": "The selected checkpoint returned an empty commitment list for the same refusal. That removes this false positive. The full comparison still includes the tuned model's mistakes and regressions."
+    },
+    {
+      "name": "consent",
+      "start": 50.28,
+      "end": 67.44,
+      "source_start": 19.327570099999996,
+      "source_end": 24.666047399999997,
+      "text": "The normal application still uses local Ollama. This separate research preview accepts only frozen synthetic examples. Sending a source to Tinker requires an explicit checkbox for each import. The notes shown here were authored for the experiment."
+    },
+    {
+      "name": "inference",
+      "start": 67.44,
+      "end": 82.64,
+      "source_start": 25.266047399999994,
+      "source_end": 33.638635699999995,
+      "text": "This import makes a fresh request to the actual saved checkpoint. It does not replay an extraction. The connection was warmed before recording, and scene holds support narration, so this video is not a latency benchmark."
+    },
+    {
+      "name": "review",
+      "start": 82.64,
+      "end": 102.92,
+      "source_start": 34.238635699999996,
+      "source_end": 42.35146020000001,
+      "text": "Both models missed Cleo's migration guide commitment in this messy transcript. The suggestions they did find retain literal source quotes. In this simulated review, the person keeps the security sign-off condition visible and checks Dario's ownership. A matching quote establishes provenance, not correctness."
+    },
+    {
+      "name": "followup",
+      "start": 102.92,
+      "end": 118.88,
+      "source_start": 42.951460200000014,
+      "source_end": 49.580800700000005,
+      "text": "Only after that review does the person approve the commitment and prepare a follow-up. The message stays editable. Nothing is sent automatically. The approval boundary remains part of PromiseKeeper, whichever model proposes the suggestion."
+    },
+    {
+      "name": "privacy",
+      "start": 118.88,
+      "end": 140.0,
+      "source_start": 50.180800700000006,
+      "source_end": 54.6,
+      "text": "Cloud processing is disclosed here. Deleting a local source does not delete provider records. This checkpoint improved synthetic-test F one, but its owner and date regressions prevent production activation. The report, raw responses, training logs, and estimated token costs preserve the complete result."
+    }
+  ]
+}

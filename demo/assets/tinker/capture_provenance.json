@@ -1,0 +1,64 @@
+{
+  "captured_at": "2026-10-25T12:39:51.940Z",
+  "checkpoint": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-1",
+  "run_dir": "backend/tinker_lab/runs/qwen3-8b-20261025-01",
+  "source_id": "d64ab558-1a43-4592-950e-8209d17dac86",
+  "synthetic": true,
+  "actual_remote_inference": true,
+  "ui_extraction_replayed": false,
+  "comparison_outputs": "Preserved actual API responses",
+  "screenshot_capture": "Playwright Chrome screenshots of actual report and live app",
+  "sampler_pre_warmed": true,
+  "speed_claim": "None; benchmark latency retains cold calls separately",
+  "simulated_reviewer_edits": {
+    "original_claim": "review the access matrix",
+    "original_owner": "Dario",
+    "approved_claim": "Review the access matrix after security sign-off",
+    "approved_owner": "Dario",
+    "reason": "Keep the condition visible before approval."
+  },
+  "test_sha256": "bea268ceda52ebe2a196020ce174770d7bdcf816c704f62efb1ef90a0050c31c",
+  "duration": 55.2,
+  "scenes": [
+    {
+      "name": "comparison",
+      "start": 0,
+      "end": 7.162801700000011
+    },
+    {
+      "name": "baseline",
+      "start": 7.162801700000011,
+      "end": 13.251662200000005
+    },
+    {
+      "name": "finetuned",
+      "start": 13.251662200000005,
+      "end": 19.327570099999996
+    },
+    {
+      "name": "consent",
+      "start": 19.327570099999996,
+      "end": 25.266047399999994
+    },
+    {
+      "name": "inference",
+      "start": 25.266047399999994,
+      "end": 34.238635699999996
+    },
+    {
+      "name": "review",
+      "start": 34.238635699999996,
+      "end": 42.951460200000014
+    },
+    {
+      "name": "followup",
+      "start": 42.951460200000014,
+      "end": 50.180800700000006
+    },
+    {
+      "name": "privacy",
+      "start": 50.180800700000006,
+      "end": 55.2
+    }
+  ]
+}

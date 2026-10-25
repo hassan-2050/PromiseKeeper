@@ -1,0 +1,19 @@
+{
+  "user_reported_available_credits_usd": 10,
+  "credit_balance_verified_by_api": false,
+  "authorized_credit_ceiling_usd": 10,
+  "out_of_pocket_spending_authorized": false,
+  "credentials_configured_locally": true,
+  "credential_storage": "Ignored project-root .env; key excluded from artifacts",
+  "authentication_verified_by_api": true,
+  "current_blocker": null,
+  "training_started": true,
+  "training_completed": true,
+  "baseline_inference_completed": true,
+  "held_out_inference_completed": true,
+  "production_activation": "rejected: owner/date regressions; Ollama remains default",
+  "provider_session_gross_estimated_cost_usd": 0.062942253,
+  "actual_invoice_cost_usd": null,
+  "cost_scope": "Main experiment session; excludes storage and separate live preview sessions",
+  "provider_usage_captured_at": "2026-10-25T12:38:40.548810+00:00"
+}

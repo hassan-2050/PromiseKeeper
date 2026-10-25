@@ -8,7 +8,7 @@ PromiseKeeper is a local-first, evidence-led assistant for conversational commit
 
 ## Run locally
 
-Requirements: Python 3.12+, Node 22+, Ollama, and enough memory for the selected local model. The configured model is Qwen3 8B (`qwen3:8b`, 8.2B parameters, Q4_K_M, 5.2 GB download, Apache-2.0 model family). Model inference is local; do not configure a cloud endpoint.
+Requirements: Python 3.12+, Node 22+, Ollama, and enough memory for the selected local model. The configured model is Qwen3 8B (`qwen3:8b`, 8.2B parameters, Q4_K_M, 5.2 GB download, Apache-2.0 model family). Default model inference is local. The optional Tinker research workflow below requires separate cloud setup and explicit consent.
 
 1. Install and start Ollama, then fetch the model: `ollama pull qwen3:8b`.
 2. In one terminal: `cd backend; python -m venv .venv; .venv\Scripts\Activate.ps1; pip install -r requirements.txt; uvicorn app.main:app --reload --port 9000`.
@@ -43,7 +43,15 @@ The charcoal/forest/mint redesign uses a left sidebar, vertical forms and direct
 
 ## Data and privacy
 
-All source data is stored in local SQLite and is sent only to the configured Ollama service. Deleting a source removes its linked commitments. The browser does not auto-send or publish any content. Back up or delete `backend/promisekeeper.db` to manage the local store.
+By default, source data is stored in local SQLite and sent only to the configured Ollama service. Deleting a source removes its linked commitments. Optional Tinker mode sends consented source text to the cloud and discloses that local deletion does not delete provider records. The browser does not auto-send messages or publish content. Back up or delete `backend/promisekeeper.db` to manage the local store.
+
+## Optional Tinker research workflow
+
+An actual [Tinker experiment](docs/TINKER_EXPERIMENT.md) trained hosted Qwen3-8B with six epochs of LoRA SFT on 80 authored synthetic cases. Validation selected epoch 1. On 40 held-out cases, pipeline F1 improved **0.8649 to 0.9254**, with false positives falling from 10 to 4. Recall and owner/date accuracy regressed, and observed latency increased. These are small synthetic-set results, not real-world accuracy claims.
+
+**Ollama remains the default.** The checkpoint fails the production quality guard. A separate research preview accepts only exact frozen synthetic texts and requires cloud consent for every import. The existing quote checks, approval boundary, SQLite, drafts and original demo remain intact. No Gemma or app rebuild is involved.
+
+Review the [full comparison](docs/TINKER_COMPARISON.md), [standalone HTML report](docs/tinker/run-20261025/comparison.html), [raw run bundle](docs/tinker/run-20261025/README.md), [new demo and screenshots](docs/TINKER_DEMO.md) and [unpublished DEV addendum](docs/DEV_TINKER_ADDENDUM_DRAFT.md). Provider session usage reports approximately $0.063 gross estimated training/sampling cost; invoice cost and credit balance remain unverified. Storage and separate UI preview calls are excluded. Install optional experiment dependencies with `uv pip install --python .venv/Scripts/python.exe -r backend/tinker_lab/requirements.txt` and follow the protocol. The new video is a local artifact awaiting YouTube upload; the DEV addendum remains unpublished.
 
 ## License
 

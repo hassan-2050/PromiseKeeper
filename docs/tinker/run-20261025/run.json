@@ -1,0 +1,62 @@
+{
+  "status": "completed",
+  "started_at": "2026-10-25T07:47:14.088189+00:00",
+  "max_estimated_usd": 10.0,
+  "actual_invoice_cost_usd": null,
+  "selected_checkpoint": {
+    "epoch": 1,
+    "state_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/weights/epoch-1",
+    "sampler_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-1",
+    "saved_at": "2026-10-25T07:56:14.795736+00:00"
+  },
+  "checkpoints": [
+    {
+      "epoch": 1,
+      "state_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/weights/epoch-1",
+      "sampler_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-1",
+      "saved_at": "2026-10-25T07:56:14.795736+00:00"
+    },
+    {
+      "epoch": 2,
+      "state_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/weights/epoch-2",
+      "sampler_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-2",
+      "saved_at": "2026-10-25T08:00:26.001246+00:00"
+    },
+    {
+      "epoch": 3,
+      "state_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/weights/epoch-3",
+      "sampler_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-3",
+      "saved_at": "2026-10-25T08:03:39.217162+00:00"
+    },
+    {
+      "epoch": 4,
+      "state_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/weights/epoch-4",
+      "sampler_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-4",
+      "saved_at": "2026-10-25T08:07:37.751417+00:00"
+    },
+    {
+      "epoch": 5,
+      "state_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/weights/epoch-5",
+      "sampler_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-5",
+      "saved_at": "2026-10-25T08:10:59.867298+00:00"
+    },
+    {
+      "epoch": 6,
+      "state_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/weights/epoch-6",
+      "sampler_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-6",
+      "saved_at": "2026-10-25T08:14:22.074160+00:00"
+    }
+  ],
+  "console_url": "https://tinker.thinkingmachines.ai/sessions/bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+  "session_id": "bc4a232a-4cf4-50dc-ab4e-3135c7171c90",
+  "ended_at": "2026-10-25T08:21:47.475410+00:00",
+  "initial_selected_checkpoint": {
+    "epoch": 1,
+    "state_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/weights/epoch-1",
+    "sampler_path": "tinker://bc4a232a-4cf4-50dc-ab4e-3135c7171c90:train:0/sampler_weights/epoch-1",
+    "saved_at": "2026-10-25T07:56:14.795736+00:00"
+  },
+  "selection_scoring_version": 2,
+  "scoring_correction": "Version 2 applies existing Ollama action/certainty defaults before pipeline validation, without changing strict raw schema validity. Corrected both models and reselected on validation only.",
+  "finalized_at": "2026-10-25T08:22:46.704689+00:00"
+}

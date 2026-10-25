@@ -1,0 +1,72 @@
+{
+  "training": {
+    "tokens": 112578,
+    "rate_card_estimate_usd": 0.04953432
+  },
+  "baseline-demo": {
+    "prompt_tokens": 251,
+    "cached_prompt_tokens": 128,
+    "sample_tokens": 181,
+    "rate_card_estimate_usd": 0.000137577
+  },
+  "baseline-test": {
+    "prompt_tokens": 7258,
+    "cached_prompt_tokens": 5120,
+    "sample_tokens": 3762,
+    "rate_card_estimate_usd": 0.0028737899999999998
+  },
+  "baseline-validation": {
+    "prompt_tokens": 3635,
+    "cached_prompt_tokens": 2432,
+    "sample_tokens": 1839,
+    "rate_card_estimate_usd": 0.001432833
+  },
+  "epoch-1-validation": {
+    "prompt_tokens": 3635,
+    "cached_prompt_tokens": 2432,
+    "sample_tokens": 1316,
+    "rate_card_estimate_usd": 0.001119033
+  },
+  "epoch-2-validation": {
+    "prompt_tokens": 3635,
+    "cached_prompt_tokens": 2432,
+    "sample_tokens": 1237,
+    "rate_card_estimate_usd": 0.0010716329999999998
+  },
+  "epoch-3-validation": {
+    "prompt_tokens": 3635,
+    "cached_prompt_tokens": 2432,
+    "sample_tokens": 1318,
+    "rate_card_estimate_usd": 0.001120233
+  },
+  "epoch-4-validation": {
+    "prompt_tokens": 3635,
+    "cached_prompt_tokens": 2432,
+    "sample_tokens": 1314,
+    "rate_card_estimate_usd": 0.0011178330000000002
+  },
+  "epoch-5-validation": {
+    "prompt_tokens": 3635,
+    "cached_prompt_tokens": 2432,
+    "sample_tokens": 1314,
+    "rate_card_estimate_usd": 0.0011178330000000002
+  },
+  "epoch-6-validation": {
+    "prompt_tokens": 3635,
+    "cached_prompt_tokens": 2432,
+    "sample_tokens": 1315,
+    "rate_card_estimate_usd": 0.001118433
+  },
+  "finetuned-demo": {
+    "prompt_tokens": 251,
+    "cached_prompt_tokens": 128,
+    "sample_tokens": 158,
+    "rate_card_estimate_usd": 0.000123777
+  },
+  "finetuned-test": {
+    "prompt_tokens": 7258,
+    "cached_prompt_tokens": 4992,
+    "sample_tokens": 2564,
+    "rate_card_estimate_usd": 0.002174958
+  }
+}

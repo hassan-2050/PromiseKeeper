@@ -1,0 +1,762 @@
+{
+  "raw": {
+    "cases": 20,
+    "tp": 7,
+    "fp": 5,
+    "fn": 9,
+    "precision": 0.5833333333333334,
+    "recall": 0.4375,
+    "f1": 0.5,
+    "owner_accuracy": 0.3125,
+    "owner_correct": 5,
+    "gold_commitments": 16,
+    "known_owner_accuracy": 0.2857142857142857,
+    "known_owner_eligible": 14,
+    "date_accuracy": 0.3125,
+    "date_correct": 5,
+    "known_date_accuracy": 0.0,
+    "known_date_eligible": 4,
+    "output_validity": 0.6,
+    "valid_outputs": 12,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 10.020497009999962,
+    "latency_p95_seconds": 42.492228299997805,
+    "per_category": {
+      "explicit": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "implicit": {
+        "cases": 2,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "conditional": {
+        "cases": 2,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "refusal": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "completed": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "hypothetical": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "ambiguous_owner": {
+        "cases": 2,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "deadline": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "multiple": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4
+      },
+      "correction": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "per_case": [
+      {
+        "id": "validation-explicit-2-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-explicit-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-implicit-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Consider the release checklist my responsibility from here",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Consider the release checklist my responsibility from here.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-implicit-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-conditional-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": "Ivan",
+            "deadline": null,
+            "conditionality": "conditional",
+            "certainty": "ambiguous",
+            "evidence": "Once access is restored, I will send the release checklist.",
+            "action": "Wait for access to be restored"
+          }
+        ]
+      },
+      {
+        "id": "validation-conditional-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-refusal-2-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "I'm declining that request",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "I'm declining that request.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-refusal-2-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "decline request to send research appendix",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm declining that request.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-completed-2-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Already taken care of, nothing pending",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Already taken care of, nothing pending.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-completed-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-hypothetical-2-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Maybe me.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Maybe me.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-hypothetical-2-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Maybe me.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Maybe me.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-ambiguous_owner-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "We still have an obligation to send the release checklist; assignment is unresolved.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-ambiguous_owner-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-deadline-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The release checklist will be in your inbox in 2 days.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "The release checklist will be in your inbox in 2 days.",
+            "action": "Check inbox for release checklist"
+          }
+        ]
+      },
+      {
+        "id": "validation-deadline-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The research appendix will be in your inbox in 2 days.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The research appendix will be in your inbox in 2 days.",
+            "action": "Check inbox for the research appendix"
+          }
+        ]
+      },
+      {
+        "id": "validation-multiple-2-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-multiple-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-correction-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "I'm taking responsibility for the release checklist",
+            "owner": "Ivan",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Ivan: I'm taking responsibility for the release checklist.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-correction-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "I'm taking responsibility for the research appendix",
+            "owner": "Hugo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm taking responsibility for the research appendix.",
+            "action": "proposed next action"
+          }
+        ]
+      }
+    ]
+  },
+  "pipeline": {
+    "cases": 20,
+    "tp": 7,
+    "fp": 5,
+    "fn": 9,
+    "precision": 0.5833333333333334,
+    "recall": 0.4375,
+    "f1": 0.5,
+    "owner_accuracy": 0.3125,
+    "owner_correct": 5,
+    "gold_commitments": 16,
+    "known_owner_accuracy": 0.2857142857142857,
+    "known_owner_eligible": 14,
+    "date_accuracy": 0.3125,
+    "date_correct": 5,
+    "known_date_accuracy": 0.0,
+    "known_date_eligible": 4,
+    "output_validity": 0.6,
+    "valid_outputs": 12,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 10.020497009999962,
+    "latency_p95_seconds": 42.492228299997805,
+    "per_category": {
+      "explicit": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "implicit": {
+        "cases": 2,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "conditional": {
+        "cases": 2,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "refusal": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "completed": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "hypothetical": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "ambiguous_owner": {
+        "cases": 2,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "deadline": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "multiple": {
+        "cases": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4
+      },
+      "correction": {
+        "cases": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "per_case": [
+      {
+        "id": "validation-explicit-2-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-explicit-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-implicit-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Consider the release checklist my responsibility from here",
+            "owner": "Tess",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Consider the release checklist my responsibility from here.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-implicit-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-conditional-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": "Tess",
+            "recipient": "Ivan",
+            "deadline": null,
+            "conditionality": "conditional",
+            "certainty": "ambiguous",
+            "evidence": "Once access is restored, I will send the release checklist.",
+            "action": "Wait for access to be restored"
+          }
+        ]
+      },
+      {
+        "id": "validation-conditional-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-refusal-2-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "I'm declining that request",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "I'm declining that request.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-refusal-2-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "decline request to send research appendix",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm declining that request.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-completed-2-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Already taken care of, nothing pending",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Already taken care of, nothing pending.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-completed-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-hypothetical-2-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Maybe me.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Maybe me.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-hypothetical-2-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Maybe me.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Maybe me.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-ambiguous_owner-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the release checklist",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "We still have an obligation to send the release checklist; assignment is unresolved.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-ambiguous_owner-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-deadline-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The release checklist will be in your inbox in 2 days.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "The release checklist will be in your inbox in 2 days.",
+            "action": "Check inbox for release checklist"
+          }
+        ]
+      },
+      {
+        "id": "validation-deadline-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The research appendix will be in your inbox in 2 days.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The research appendix will be in your inbox in 2 days.",
+            "action": "Check inbox for the research appendix"
+          }
+        ]
+      },
+      {
+        "id": "validation-multiple-2-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-multiple-2-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "validation-correction-2-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "I'm taking responsibility for the release checklist",
+            "owner": "Ivan",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Ivan: I'm taking responsibility for the release checklist.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "validation-correction-2-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "I'm taking responsibility for the research appendix",
+            "owner": "Hugo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'm taking responsibility for the research appendix.",
+            "action": "proposed next action"
+          }
+        ]
+      }
+    ]
+  }
+}

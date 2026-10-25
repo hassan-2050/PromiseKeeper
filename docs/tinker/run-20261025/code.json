@@ -1,0 +1,13 @@
+{
+  "git_head": "56db9bcb4da926fda4204933936abb0804051c9a",
+  "source_sha256": {
+    "backend\\tinker_lab\\adapter.py": "6db3d979368ff5780e2ba8d5ba2dca465620d20ce4797f7747836bea98d2c609",
+    "backend\\tinker_lab\\evaluation.py": "89869fa775e883d2d7231f43eb2857409e56b4a087d1dc1fde5472b82cc88c4b",
+    "backend\\tinker_lab\\experiment.py": "b709d32bf31387c33696c9785c00ba8494bf522c08f0ac571b7f67d313ce6e32",
+    "backend\\tinker_lab\\prepare_data.py": "32bb3990a5a8cc0f66f60b9d4b2552d4174e86951e328e77e51927de033bdf88",
+    "backend\\tinker_lab\\report.py": "ce74b64d4a6b1f1c51db9a1f26c9e112662a5b06e4a59b4f8bcb7b053f5edce2",
+    "backend\\tinker_lab\\transport.py": "6e9b518a7524d31e1d1edd4a31b3279b6a664106cd1a8f265fbadd869e0c8226",
+    "backend\\tinker_lab\\__init__.py": "f70f68ebe09cd60e97e53b8d1a0bf6efa3d7fde68ec78e3b1d75d966bbc8b734",
+    "backend\\app\\extraction_contract.py": "35a92f522acfeb9aa0ad8e45841ed96ebd0e8d8b7e937c9b6af588c7c2883511"
+  }
+}

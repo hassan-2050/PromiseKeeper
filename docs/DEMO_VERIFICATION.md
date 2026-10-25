@@ -1,5 +1,7 @@
 # Narrated demo verification
 
+The original local-model demo verified below is preserved. The separate, completed Tinker experiment has its own [new demo and verification](TINKER_DEMO.md), with mixed results and cloud processing disclosed.
+
 The user selected `af_sarah` and approved the public repository `hassan-2050/PromiseKeeper`. Narration uses genuine `hexgrad/Kokoro-82M`, revision `f3ff3571791e39611d31c381e3a41a3af07b4987`, through Kokoro 0.9.4. No replacement speech service was used.
 
 ## Media checks

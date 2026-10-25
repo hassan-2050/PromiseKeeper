@@ -111,6 +111,7 @@ export default function Home() {
   const [sourceName, setSourceName] = useState("");
   const [sourceTimestamp, setSourceTimestamp] = useState("");
   const [importing, setImporting] = useState(false);
+  const [remoteConsent, setRemoteConsent] = useState(false);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [draft, setDraft] = useState<Draft | null>(null);
   const [manageSources, setManageSources] = useState(false);
@@ -142,6 +143,9 @@ export default function Home() {
   useEffect(() => {
     void refresh();
   }, [refresh]);
+  useEffect(() => {
+    setRemoteConsent(false);
+  }, [text, sourceTimestamp, health?.inference]);
   useEffect(() => {
     if (!notice) return;
     const timer = window.setTimeout(() => setNotice(""), 6500);
@@ -185,7 +189,10 @@ export default function Home() {
     };
   }, [mobileOpen]);
 
-  const ready = Boolean(health?.model_installed && health?.ollama_available);
+  const remote = health?.inference === "remote";
+  const ready = remote
+    ? Boolean(health?.model_available)
+    : Boolean(health?.model_installed && health?.ollama_available);
   const active = items.filter(
     (item) => item.status !== "rejected" && item.status !== "complete",
   );
@@ -249,6 +256,10 @@ export default function Home() {
 
   async function ingest() {
     if (!text.trim() || importing) return;
+    if (remote && !remoteConsent) {
+      setError("Confirm that these notes may be sent to Tinker for this import.");
+      return;
+    }
     setImporting(true);
     setError("");
     try {
@@ -258,6 +269,7 @@ export default function Home() {
           text,
           name: sourceName.trim() || "Pasted notes",
           source_timestamp: sourceTimestamp || null,
+          allow_remote_inference: remote && remoteConsent,
         }),
       });
       await refresh(true);
@@ -475,7 +487,7 @@ export default function Home() {
           <span className="workspace-initial">P</span>
           <div>
             <strong>Personal workspace</strong>
-            <span>Just you. On this device.</span>
+            <span>{remote ? "Local workspace. Tinker enabled." : "Just you. On this device."}</span>
           </div>
           <LockKeyhole size={13} />
         </div>
@@ -513,18 +525,16 @@ export default function Home() {
             <div>
               <strong>
                 {loading
-                  ? "Checking local model"
+                  ? "Checking model"
                   : ready
-                    ? "Local AI is ready"
-                    : "Local AI is offline"}
+                    ? remote ? "Tinker is configured" : "Local AI is ready"
+                    : remote ? "Tinker needs setup" : "Local AI is offline"}
               </strong>
               <span>{health?.model || "Ollama"}</span>
             </div>
             <Leaf size={17} />
             <p>
-              Your notes stay close.
-              <br />
-              Inference runs on your device.
+              {remote ? "Cloud inference is enabled. Each import needs your consent." : <>Your notes stay close.<br />Inference runs on your device.</>}
             </p>
           </div>
           <button
@@ -532,7 +542,7 @@ export default function Home() {
             onClick={() => navigate("Privacy")}
           >
             <ShieldCheck size={18} />
-            <span>Private by default</span>
+            <span>{remote ? "Cloud data settings" : "Private by default"}</span>
             <ChevronRight size={15} />
           </button>
         </div>
@@ -559,7 +569,7 @@ export default function Home() {
               {loading
                 ? "Checking model"
                 : ready
-                  ? "On-device AI"
+                  ? remote ? "Tinker · cloud AI" : "On-device AI"
                   : "Model offline"}
             </span>
             <button
@@ -809,7 +819,7 @@ export default function Home() {
                         </p>
                         <span>
                           <ShieldCheck size={14} />
-                          Nothing gets sent for you
+                          {remote ? "No follow-up messages sent for you" : "Nothing gets sent for you"}
                         </span>
                       </section>
                       <div className="source-count">
@@ -966,7 +976,7 @@ export default function Home() {
                       <span>{text.length.toLocaleString()} characters</span>
                       <span>
                         <LockKeyhole size={12} />
-                        Stays on this device
+                        {remote ? "Sent to Tinker only with consent" : "Stays on this device"}
                       </span>
                     </div>
                     <label
@@ -988,9 +998,19 @@ export default function Home() {
                         disabled={importing}
                       />
                     </label>
+                    {remote && (
+                      <>
+                      {health?.research_preview && <p className="research-notice" role="note">Research preview: this checkpoint has measured regressions. Only the experiment&apos;s synthetic examples can be imported. Check every owner and date before approval.</p>}
+                      <label className="remote-consent">
+                        <input type="checkbox" checked={remoteConsent}
+                          onChange={(e) => setRemoteConsent(e.target.checked)} disabled={importing} />
+                        <span>I agree to send these notes to Thinking Machines&apos; Tinker for cloud extraction. The source and suggestions are also stored in this local workspace.</span>
+                      </label>
+                      </>
+                    )}
                     <button
                       className="button primary full-button"
-                      disabled={importing || !text.trim()}
+                      disabled={importing || !text.trim() || (remote && (!remoteConsent || !ready))}
                       onClick={ingest}
                     >
                       {importing ? (
@@ -1008,15 +1028,15 @@ export default function Home() {
                     </button>
                     {importing && (
                       <p role="status" className="processing-message">
-                        Your local model is reading the notes. Keep this page
-                        open; every suggestion will include its source quote.
+                        {remote ? "Tinker is reading the notes." : "Your local model is reading the notes."}{" "}
+                        Keep this page open; every suggestion will include its source quote.
                       </p>
                     )}
                     <p className="local-footnote">
                       <ShieldCheck size={14} />
                       {ready
-                        ? `${health?.model} is ready on this device.`
-                        : "The local model must be running to find promises."}
+                        ? remote ? `${health?.model} is configured for cloud extraction.` : `${health?.model} is ready on this device.`
+                        : remote ? "A verified Tinker checkpoint must be configured to find promises." : "The local model must be running to find promises."}
                     </p>
                   </section>
                   <aside className="import-aside">
@@ -1280,12 +1300,12 @@ export default function Home() {
                       are yours.
                     </h2>
                     <p>
-                      Notes live in your local workspace. The language model
-                      runs on your computer. You choose what to keep.
+                      {remote ? "Notes live in your local workspace. With your consent, source text is sent to Tinker for cloud inference. Deleting it here does not delete provider-side records." : "Notes live in your local workspace. The language model runs on your computer. You choose what to keep."}
                     </p>
+                    {health?.research_preview && <p>Research preview is restricted to frozen synthetic examples. This checkpoint is not approved as the production replacement.</p>}
                     <div>
                       <LockKeyhole size={17} />
-                      <span>No cloud model account</span>
+                      <span>{remote ? "Cloud model account enabled" : "No cloud model account"}</span>
                     </div>
                     <div>
                       <FileText size={17} />
@@ -1302,17 +1322,17 @@ export default function Home() {
                         <Leaf size={21} />
                       </div>
                       <div>
-                        <h2>Local model</h2>
+                        <h2>{remote ? "Tinker cloud model" : "Local model"}</h2>
                         <p>
                           {ready
-                            ? `${health?.model} is installed and ready to read your notes.`
-                            : "The local model is unavailable. Start Ollama and check the model, then refresh."}
+                            ? remote ? `${health?.model} is configured. Each import requires cloud-data consent.` : `${health?.model} is installed and ready to read your notes.`
+                            : remote ? "A completed, quality-checked Tinker checkpoint and credentials are required." : "The local model is unavailable. Start Ollama and check the model, then refresh."}
                         </p>
                         <span
                           className={`connection-label ${ready ? "connected" : ""}`}
                         >
                           <span className="connection-dot" />
-                          {ready ? "Connected on this device" : "Not connected"}
+                          {ready ? remote ? "Cloud inference configured" : "Connected on this device" : "Not connected"}
                         </span>
                       </div>
                       <button
@@ -1457,7 +1477,7 @@ export default function Home() {
             </span>
             <span>
               <LockKeyhole size={12} />
-              Local. Private. Yours.
+              {remote ? "Stored locally. Cloud AI by consent." : "Local. Private. Yours."}
             </span>
           </footer>
         </div>
@@ -1492,8 +1512,7 @@ export default function Home() {
         </p>
         <div className="help-privacy">
           <ShieldCheck size={19} />
-          Notes are stored on this device and processed through your local
-          model.
+          {remote ? "Notes are stored on this device. With your explicit consent, source text is sent to Tinker for cloud extraction." : "Notes are stored on this device and processed through your local model."}
         </div>
         <button
           className="button primary full-button"

@@ -1,0 +1,128 @@
+{
+  "raw": {
+    "cases": 1,
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1": 0.8,
+    "owner_accuracy": 0.6666666666666666,
+    "owner_correct": 2,
+    "gold_commitments": 3,
+    "known_owner_accuracy": 0.5,
+    "known_owner_eligible": 2,
+    "date_accuracy": 0.6666666666666666,
+    "date_correct": 2,
+    "known_date_accuracy": 1.0,
+    "known_date_eligible": 1,
+    "output_validity": 1.0,
+    "valid_outputs": 1,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 8.50060740000481,
+    "latency_p95_seconds": 8.50060740000481,
+    "per_category": {
+      "demo": {
+        "cases": 1,
+        "tp": 2,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    "per_case": [
+      {
+        "id": "demo-messy-handoff",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "review the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": "2026-11-18",
+            "conditionality": "security signs off",
+            "certainty": "suggested",
+            "evidence": "If security signs off, I'll review the access matrix by 2026-11-18.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "send the incident digest",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Someone still needs to send the incident digest. Owner undecided.",
+            "action": "Review this commitment"
+          }
+        ]
+      }
+    ]
+  },
+  "pipeline": {
+    "cases": 1,
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1": 0.8,
+    "owner_accuracy": 0.6666666666666666,
+    "owner_correct": 2,
+    "gold_commitments": 3,
+    "known_owner_accuracy": 0.5,
+    "known_owner_eligible": 2,
+    "date_accuracy": 0.6666666666666666,
+    "date_correct": 2,
+    "known_date_accuracy": 1.0,
+    "known_date_eligible": 1,
+    "output_validity": 1.0,
+    "valid_outputs": 1,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 8.50060740000481,
+    "latency_p95_seconds": 8.50060740000481,
+    "per_category": {
+      "demo": {
+        "cases": 1,
+        "tp": 2,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    "per_case": [
+      {
+        "id": "demo-messy-handoff",
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "review the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": "2026-11-18",
+            "conditionality": "security signs off",
+            "certainty": "suggested",
+            "evidence": "If security signs off, I'll review the access matrix by 2026-11-18.",
+            "action": "Review this commitment"
+          },
+          {
+            "claim": "send the incident digest",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Someone still needs to send the incident digest. Owner undecided.",
+            "action": "Review this commitment"
+          }
+        ]
+      }
+    ]
+  }
+}

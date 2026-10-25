@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "generator_sha256": "32bb3990a5a8cc0f66f60b9d4b2552d4174e86951e328e77e51927de033bdf88",
+  "legacy_development_sha256": "903dcadb63305712faed8a9a5cdf2fee1c1765a49d98ad44b23d83c915c4877d",
+  "split_policy": "Authored template families, people and task domains disjoint across splits; no random row splitting.",
+  "limitations": [
+    "Small authored synthetic starter corpus, not a real-world benchmark.",
+    "Task concepts and annotation policy are shared across splits.",
+    "No independent human annotation audit has been performed."
+  ],
+  "splits": {
+    "train": {
+      "count": 80,
+      "sha256": "e56e6518a945326dcb732044b72f09ab1308af7bd633ff283340a3f40cb30d6c",
+      "categories": {
+        "explicit": 8,
+        "implicit": 8,
+        "conditional": 8,
+        "refusal": 8,
+        "completed": 8,
+        "hypothetical": 8,
+        "ambiguous_owner": 8,
+        "deadline": 8,
+        "multiple": 8,
+        "correction": 8
+      },
+      "families": [
+        "ambiguous_owner-0",
+        "ambiguous_owner-1",
+        "completed-0",
+        "completed-1",
+        "conditional-0",
+        "conditional-1",
+        "correction-0",
+        "correction-1",
+        "deadline-0",
+        "deadline-1",
+        "explicit-0",
+        "explicit-1",
+        "hypothetical-0",
+        "hypothetical-1",
+        "implicit-0",
+        "implicit-1",
+        "multiple-0",
+        "multiple-1",
+        "refusal-0",
+        "refusal-1"
+      ]
+    },
+    "validation": {
+      "count": 20,
+      "sha256": "afe66afdbd71cd2d8083e4b25c8a6b3e91c12185507099ccad5f931183588fea",
+      "categories": {
+        "explicit": 2,
+        "implicit": 2,
+        "conditional": 2,
+        "refusal": 2,
+        "completed": 2,
+        "hypothetical": 2,
+        "ambiguous_owner": 2,
+        "deadline": 2,
+        "multiple": 2,
+        "correction": 2
+      },
+      "families": [
+        "ambiguous_owner-2",
+        "completed-2",
+        "conditional-2",
+        "correction-2",
+        "deadline-2",
+        "explicit-2",
+        "hypothetical-2",
+        "implicit-2",
+        "multiple-2",
+        "refusal-2"
+      ]
+    },
+    "test": {
+      "count": 40,
+      "sha256": "bea268ceda52ebe2a196020ce174770d7bdcf816c704f62efb1ef90a0050c31c",
+      "categories": {
+        "explicit": 4,
+        "implicit": 4,
+        "conditional": 4,
+        "refusal": 4,
+        "completed": 4,
+        "hypothetical": 4,
+        "ambiguous_owner": 4,
+        "deadline": 4,
+        "multiple": 4,
+        "correction": 4
+      },
+      "families": [
+        "ambiguous_owner-3",
+        "ambiguous_owner-4",
+        "completed-3",
+        "completed-4",
+        "conditional-3",
+        "conditional-4",
+        "correction-3",
+        "correction-4",
+        "deadline-3",
+        "deadline-4",
+        "explicit-3",
+        "explicit-4",
+        "hypothetical-3",
+        "hypothetical-4",
+        "implicit-3",
+        "implicit-4",
+        "multiple-3",
+        "multiple-4",
+        "refusal-3",
+        "refusal-4"
+      ]
+    }
+  }
+}

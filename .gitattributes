@@ -1,0 +1,5 @@
+# Preserve bytes used by dataset/code/artifact hashes across Git checkouts.
+backend/tinker_lab/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+backend/app/extraction_contract.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/tinker/*.json text eol=lf
+docs/tinker/run-20261025/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

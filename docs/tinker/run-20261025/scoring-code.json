@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "sha256": "5f7c16d3c841a6a059e2264879855306d11eb3515ad9daa9acde99d3f3cbd3e5",
+  "correction": "Version 2 applies existing Ollama action/certainty defaults before pipeline validation, without changing strict raw schema validity. Corrected both models and reselected on validation only."
+}

@@ -42,6 +42,11 @@ export type Health = {
   model: string;
   ollama_available: boolean;
   model_installed: boolean;
+  inference?: "local" | "remote";
+  provider?: string;
+  model_available?: boolean;
+  research_preview?: boolean;
+  quality_regressions?: string[];
 };
 export type View =
   | "Overview"

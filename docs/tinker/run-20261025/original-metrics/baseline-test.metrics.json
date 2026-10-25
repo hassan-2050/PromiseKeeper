@@ -1,0 +1,1360 @@
+{
+  "raw": {
+    "cases": 40,
+    "tp": 17,
+    "fp": 8,
+    "fn": 15,
+    "precision": 0.68,
+    "recall": 0.53125,
+    "f1": 0.5964912280701754,
+    "owner_accuracy": 0.53125,
+    "owner_correct": 17,
+    "gold_commitments": 32,
+    "known_owner_accuracy": 0.4642857142857143,
+    "known_owner_eligible": 28,
+    "date_accuracy": 0.53125,
+    "date_correct": 17,
+    "known_date_accuracy": 0.0,
+    "known_date_eligible": 2,
+    "output_validity": 0.525,
+    "valid_outputs": 21,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 2.5201225649998378,
+    "latency_p95_seconds": 2.285448100003123,
+    "per_category": {
+      "explicit": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4
+      },
+      "implicit": {
+        "cases": 4,
+        "tp": 2,
+        "fp": 0,
+        "fn": 2
+      },
+      "conditional": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4
+      },
+      "refusal": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0
+      },
+      "completed": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0
+      },
+      "hypothetical": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "ambiguous_owner": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "deadline": {
+        "cases": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3
+      },
+      "multiple": {
+        "cases": 4,
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      },
+      "correction": {
+        "cases": 4,
+        "tp": 2,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    "per_case": [
+      {
+        "id": "test-explicit-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-explicit-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-explicit-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-explicit-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-implicit-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The vendor packet is on my plate now.",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The vendor packet is on my plate now.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The migration guide is on my plate now.",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The migration guide is on my plate now.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-implicit-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-conditional-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-conditional-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-conditional-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-conditional-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-refusal-3-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "remove my name from the vendor packet",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Please remove my name from the vendor packet.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-refusal-4-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Not this time. My answer is no.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Not this time. My answer is no.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-4-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Not this time. My answer is no.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Not this time. My answer is no.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-completed-3-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "the vendor packet went out last night",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "For the record, the vendor packet went out last night. That closes it.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-completed-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-completed-4-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The tracker marks the vendor packet complete",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The tracker marks the vendor packet complete.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-completed-4-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The tracker marks the migration guide complete",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The tracker marks the migration guide complete.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-hypothetical-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-4-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Sending the vendor packet is one possible option",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Sending the vendor packet is one possible option",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-hypothetical-4-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Sending the migration guide is one possible option",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Cleo: Sending the migration guide is one possible option. No decision or assignment yet.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Sending the vendor packet is mandatory",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Sending the vendor packet is mandatory.",
+            "action": "Identify the responsible party for sending the vendor packet"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Sending the migration guide is mandatory",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Sending the migration guide is mandatory.",
+            "action": "Identify the owner of the migration guide task"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The vendor packet needs an accountable sender.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "The vendor packet needs an accountable sender.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The migration guide needs an accountable sender.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "The migration guide needs an accountable sender.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-deadline-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-deadline-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the vendor packet tomorrow.",
+            "action": "Check if the vendor packet has been sent"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-multiple-3-0",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Count on me for the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me for the vendor packet.",
+            "action": "proposed next action"
+          },
+          {
+            "claim": "I'll review the incident digest",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll review the incident digest.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-3-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Count on me for the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me for the migration guide.",
+            "action": "proposed next action"
+          },
+          {
+            "claim": "I'll review the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll review the access matrix.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-4-0",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "reviewing the incident digest",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for reviewing the incident digest.",
+            "action": "proposed next action"
+          },
+          {
+            "claim": "sending the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for sending the vendor packet.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-4-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "reviewing the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for reviewing the access matrix.",
+            "action": "proposed next action"
+          },
+          {
+            "claim": "sending the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for sending the migration guide.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Put my name down to send the vendor packet",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Put my name down to send the vendor packet.",
+            "action": "Verify if Bilal's name is added as the sender of the vendor packet."
+          }
+        ]
+      },
+      {
+        "id": "test-correction-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Put my name down to send the migration guide",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Put my name down to send the migration guide.",
+            "action": "Verify if Dario's name is added as the sender of the migration guide."
+          }
+        ]
+      },
+      {
+        "id": "test-correction-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-correction-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      }
+    ]
+  },
+  "pipeline": {
+    "cases": 40,
+    "tp": 17,
+    "fp": 8,
+    "fn": 15,
+    "precision": 0.68,
+    "recall": 0.53125,
+    "f1": 0.5964912280701754,
+    "owner_accuracy": 0.53125,
+    "owner_correct": 17,
+    "gold_commitments": 32,
+    "known_owner_accuracy": 0.4642857142857143,
+    "known_owner_eligible": 28,
+    "date_accuracy": 0.53125,
+    "date_correct": 17,
+    "known_date_accuracy": 0.0,
+    "known_date_eligible": 2,
+    "output_validity": 0.525,
+    "valid_outputs": 21,
+    "request_errors": 0,
+    "raw_quote_substring_rate": 1.0,
+    "latency_mean_seconds": 2.5201225649998378,
+    "latency_p95_seconds": 2.285448100003123,
+    "per_category": {
+      "explicit": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4
+      },
+      "implicit": {
+        "cases": 4,
+        "tp": 2,
+        "fp": 0,
+        "fn": 2
+      },
+      "conditional": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4
+      },
+      "refusal": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0
+      },
+      "completed": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0
+      },
+      "hypothetical": {
+        "cases": 4,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "ambiguous_owner": {
+        "cases": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "deadline": {
+        "cases": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3
+      },
+      "multiple": {
+        "cases": 4,
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      },
+      "correction": {
+        "cases": 4,
+        "tp": 2,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    "per_case": [
+      {
+        "id": "test-explicit-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-explicit-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-explicit-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-explicit-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-implicit-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The vendor packet is on my plate now.",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The vendor packet is on my plate now.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The migration guide is on my plate now.",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The migration guide is on my plate now.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-implicit-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-implicit-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-conditional-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-conditional-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-conditional-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-conditional-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-refusal-3-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "remove my name from the vendor packet",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Please remove my name from the vendor packet.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-refusal-4-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Not this time. My answer is no.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Not this time. My answer is no.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-refusal-4-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Not this time. My answer is no.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Not this time. My answer is no.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-completed-3-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "the vendor packet went out last night",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "For the record, the vendor packet went out last night. That closes it.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-completed-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-completed-4-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The tracker marks the vendor packet complete",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The tracker marks the vendor packet complete.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-completed-4-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The tracker marks the migration guide complete",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "The tracker marks the migration guide complete.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-hypothetical-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-hypothetical-4-0",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Sending the vendor packet is one possible option",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Sending the vendor packet is one possible option",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-hypothetical-4-1",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Sending the migration guide is one possible option",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Cleo: Sending the migration guide is one possible option. No decision or assignment yet.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Sending the vendor packet is mandatory",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Sending the vendor packet is mandatory.",
+            "action": "Identify the responsible party for sending the vendor packet"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Sending the migration guide is mandatory",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Sending the migration guide is mandatory.",
+            "action": "Identify the owner of the migration guide task"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The vendor packet needs an accountable sender.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "The vendor packet needs an accountable sender.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-ambiguous_owner-4-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "The migration guide needs an accountable sender.",
+            "owner": null,
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "The migration guide needs an accountable sender.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-3-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-deadline-3-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-deadline-4-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "send the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll send the vendor packet tomorrow.",
+            "action": "Check if the vendor packet has been sent"
+          }
+        ]
+      },
+      {
+        "id": "test-deadline-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-multiple-3-0",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Count on me for the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me for the vendor packet.",
+            "action": "proposed next action"
+          },
+          {
+            "claim": "I'll review the incident digest",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll review the incident digest.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-3-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Count on me for the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "Count on me for the migration guide.",
+            "action": "proposed next action"
+          },
+          {
+            "claim": "I'll review the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I'll review the access matrix.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-4-0",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "reviewing the incident digest",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for reviewing the incident digest.",
+            "action": "proposed next action"
+          },
+          {
+            "claim": "sending the vendor packet",
+            "owner": "Amina",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for sending the vendor packet.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-multiple-4-1",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "reviewing the access matrix",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for reviewing the access matrix.",
+            "action": "proposed next action"
+          },
+          {
+            "claim": "sending the migration guide",
+            "owner": "Cleo",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "suggested",
+            "evidence": "I accept responsibility for sending the migration guide.",
+            "action": "proposed next action"
+          }
+        ]
+      },
+      {
+        "id": "test-correction-3-0",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Put my name down to send the vendor packet",
+            "owner": "Bilal",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Put my name down to send the vendor packet.",
+            "action": "Verify if Bilal's name is added as the sender of the vendor packet."
+          }
+        ]
+      },
+      {
+        "id": "test-correction-3-1",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "output_valid": true,
+        "accepted": [
+          {
+            "claim": "Put my name down to send the migration guide",
+            "owner": "Dario",
+            "recipient": null,
+            "deadline": null,
+            "conditionality": null,
+            "certainty": "ambiguous",
+            "evidence": "Put my name down to send the migration guide.",
+            "action": "Verify if Dario's name is added as the sender of the migration guide."
+          }
+        ]
+      },
+      {
+        "id": "test-correction-4-0",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      },
+      {
+        "id": "test-correction-4-1",
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "output_valid": false,
+        "accepted": []
+      }
+    ]
+  }
+}

@@ -13,3 +13,6 @@ node_modules/
 **/*.db
 demo/assets/video/
 demo/assets/audio/*.wav
+backend/tinker_lab/runs/
+demo/assets/tinker/video/
+demo/assets/tinker/audio/*.wav

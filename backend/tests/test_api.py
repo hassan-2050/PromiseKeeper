@@ -58,3 +58,31 @@ def test_followup_requires_approval(monkeypatch):
     client.delete(f"/api/sources/{data['source_id']}")
     with main.Session() as db:
         assert db.query(main.Draft).filter_by(commitment_id=item["id"]).count() == 0
+
+
+def test_remote_flag_requires_per_import_consent_and_preserves_quote_and_approval_boundaries(monkeypatch):
+    from app import tinker_runtime
+    monkeypatch.setattr(main, "EXTRACTION_PROVIDER", "tinker")
+    calls = []
+    async def fake_remote(text, timestamp):
+        calls.append(text)
+        return [
+            {"claim": "send the vendor packet", "owner": "Amina", "evidence": "I'll send the vendor packet.", "action": "Review"},
+            {"claim": "invented", "owner": "Nobody", "evidence": "fabricated quote", "action": "Review"},
+            {"claim": "send the report", "owner": "Bilal", "evidence": "I will not send the report.", "action": "Review"},
+        ]
+    monkeypatch.setattr(tinker_runtime, "extract_tinker", fake_remote)
+    body = {"name": "Synthetic remote regression", "text": "Amina: I'll send the vendor packet.\nBilal: I will not send the report."}
+    assert client.post("/api/import", json=body).status_code == 422
+    assert calls == []
+    response = client.post("/api/import", json={**body, "allow_remote_inference": True})
+    assert response.status_code == 200
+    data = response.json()
+    assert data["count"] == 1
+    item = data["commitments"][0]
+    assert item["status"] == "suggested"
+    assert client.post(f"/api/commitments/{item['id']}/draft", json={}).status_code == 409
+    assert client.patch(f"/api/commitments/{item['id']}", json={"status": "confirmed"}).status_code == 200
+    assert client.post(f"/api/commitments/{item['id']}/draft", json={}).json()["requires_human_review"]
+    assert client.delete(f"/api/sources/{data['source_id']}").status_code == 200
+    assert not any(c["source_id"] == data["source_id"] for c in client.get("/api/commitments").json())

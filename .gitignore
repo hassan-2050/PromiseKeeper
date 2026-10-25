@@ -13,3 +13,7 @@ backend/promisekeeper.db
 demo/assets/video/*.mp4
 demo/assets/video/*.webm
 demo/assets/audio/*.wav
+backend/tinker_lab/runs/
+demo/assets/tinker/video/*.mp4
+demo/assets/tinker/video/*.webm
+demo/assets/tinker/audio/*.wav

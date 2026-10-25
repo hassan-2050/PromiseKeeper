@@ -1,0 +1,33 @@
+{
+  "case": {
+    "id": "test-refusal-4-0",
+    "split": "test",
+    "family": "refusal-4",
+    "category": "refusal",
+    "synthetic": true,
+    "text": "Bilal: Can we count on you for the vendor packet?\nAmina: Not this time. My answer is no.",
+    "source_timestamp": null,
+    "gold": []
+  },
+  "outputs": {
+    "baseline": {
+      "id": "test-refusal-4-0",
+      "raw": "{\n  \"commitments\": [\n    {\n      \"claim\": \"Not this time. My answer is no.\",\n      \"owner\": null,\n      \"recipient\": null,\n      \"deadline\": null,\n      \"conditionality\": null,\n      \"certainty\": \"ambiguous\",\n      \"evidence\": \"Not this time. My answer is no.\",\n      \"action\": \"proposed next action\"\n    }\n  ]\n}",
+      "stop_reason": "stop",
+      "latency_seconds": 2.0477940999990096,
+      "prompt_tokens": 185,
+      "sample_tokens": 87,
+      "cached_prompt_tokens": 128
+    },
+    "finetuned": {
+      "id": "test-refusal-4-0",
+      "raw": "{\"commitments\": []}",
+      "stop_reason": "stop",
+      "latency_seconds": 7.151143400005822,
+      "prompt_tokens": 185,
+      "sample_tokens": 7,
+      "cached_prompt_tokens": 128
+    }
+  },
+  "selection": "First negative test case in frozen order with fewer fine-tuned false positives; selected after evaluation for illustration only."
+}

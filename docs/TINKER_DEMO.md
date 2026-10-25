@@ -1,6 +1,8 @@
 # Tinker demo and verification
 
-The new [140-second narrated demo](../demo/assets/tinker/video/final_demo.mp4) is a separate local artifact. It uses the user-selected Kokoro `af_sarah` voice at natural speed, real Tinker outputs and a fresh checkpoint import. No new YouTube URL has been created. The original published demo and its URL remain unchanged.
+The new [140-second narrated demo is on YouTube](https://www.youtube.com/watch?v=5HudDBuLpbU), with its local export at `demo/assets/tinker/video/final_demo.mp4`. It uses the user-selected Kokoro `af_sarah` voice at natural speed, real Tinker outputs and a fresh checkpoint import. The original published demo and its URL remain unchanged.
+
+The user supplied this upload on October 25, 2026. YouTube's oEmbed endpoint returned the title **Tinker-promise** and author **Hassan Shah**. The media checks below describe the verified local export.
 
 ## Captured evidence
 

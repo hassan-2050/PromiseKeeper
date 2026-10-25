@@ -4,13 +4,17 @@ published: false
 tags: ai, opensource, machinelearning
 ---
 
-> Unpublished addendum for review, targeting Best Use of Tinker. The experiment has run; eligibility is not asserted. This draft does not replace the existing published article. Repository-relative media links must be replaced with approved public asset links before publication. The new video is local; no new YouTube URL exists.
+> Unpublished addendum for review, targeting Best Use of Tinker. The experiment has run; eligibility is not asserted. This draft does not replace the existing published article. The demo and screenshots below use public links; DEV publication still requires approval.
 
 PromiseKeeper already extracts possible promises from conversations with local Qwen3 8B through Ollama. Each suggestion keeps its exact source quote. A person reviews and approves it before preparing an editable follow-up draft. The app never sends that message.
 
 I wanted to test whether supervised fine-tuning could improve that extraction task. Adding a cloud dependency would not answer the question, so I ran an actual baseline, trained a Qwen3-8B adapter with Thinking Machines' Tinker, and measured the selected checkpoint on the same held-out inputs.
 
 The result was mixed: fewer false promises and cleaner structured output, alongside worse owner accuracy and slower observed sampling. That is why the existing local extractor remains the default.
+
+{% youtube 5HudDBuLpbU %}
+
+[Watch the updated Tinker experiment demo](https://www.youtube.com/watch?v=5HudDBuLpbU). The 140-second recording shows the comparison, fresh checkpoint inference, review and approval.
 
 ## The experiment
 
@@ -37,7 +41,7 @@ The primary results include the application's existing defaults, evidence checks
 
 Known-date accuracy remained two out of two for both models. That denominator is too small for a general deadline claim. The date score above also counts null fields and misses. Latency includes remote waiting and network effects; it is not a controlled hardware benchmark.
 
-![Actual measured comparison](../demo/assets/tinker/screenshots/measured-comparison.png)
+![Actual measured comparison](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/00aa639f0a793d533e64d427a07ccf2f26891e1c/demo/assets/tinker/screenshots/measured-comparison.png)
 
 One illustrative refusal exposes a useful improvement. Asked about a vendor packet, Amina replies: "Not this time. My answer is no." The baseline extracted that refusal as a possible commitment. The checkpoint returned `{"commitments": []}`. This example was selected after evaluation to illustrate fewer false positives; it is part of the same test set, not another benchmark.
 
@@ -53,14 +57,14 @@ The matcher uses task nouns and evidence overlap, not full semantic entailment. 
 
 The adapter works with the existing extraction contract, but its owner/date regressions fail the production quality guard. Ordinary activation is blocked. The separate recording uses a clearly labelled research preview that accepts only exact frozen synthetic examples, with explicit cloud consent for every import. General user notes cannot enter that preview.
 
-![Actual checkpoint suggestions awaiting review](../demo/assets/tinker/screenshots/checkpoint-evidence-review.png)
+![Actual checkpoint suggestions awaiting review](https://raw.githubusercontent.com/hassan-2050/PromiseKeeper/00aa639f0a793d533e64d427a07ccf2f26891e1c/demo/assets/tinker/screenshots/checkpoint-evidence-review.png)
 
-The new local demo shows a fresh checkpoint request, a simulated review that keeps the security condition visible, approval and an editable follow-up. Nothing is sent. The connection was warmed before recording and scene holds support narration, so the edited video is not a speed measurement. Cloud privacy labels also explain that deleting a local source does not delete provider-side records.
+The new demo shows a fresh checkpoint request, a simulated review that keeps the security condition visible, approval and an editable follow-up. Nothing is sent. The connection was warmed before recording and scene holds support narration, so the edited video is not a speed measurement. Cloud privacy labels also explain that deleting a local source does not delete provider-side records.
 
 ## What it cost and what is preserved
 
 Measured tokens at recorded public rates estimate $0.049534 for training and $0.013408 for recorded sampling: about $0.063 combined, excluding storage and separate live preview calls. The provider's session usage later reported the same gross estimate. That is not an invoice or verified credit deduction. Actual invoice cost remains unknown.
 
-Configuration, split hashes, raw responses, per-case scores, losses, all six checkpoint identifiers, environment/source snapshots, the scoring repair and cost evidence are in the [experiment bundle](tinker/run-20261025/README.md). The [full report](TINKER_COMPARISON.md) and [demo verification](TINKER_DEMO.md) explain the evidence and limits. The existing published article and original demo are preserved.
+Configuration, split hashes, raw responses, per-case scores, losses, all six checkpoint identifiers, environment/source snapshots, the scoring repair and cost evidence are in the [experiment bundle](https://github.com/hassan-2050/PromiseKeeper/tree/main/docs/tinker/run-20261025). The [full report](https://github.com/hassan-2050/PromiseKeeper/blob/main/docs/TINKER_COMPARISON.md) and [demo verification](https://github.com/hassan-2050/PromiseKeeper/blob/main/docs/TINKER_DEMO.md) explain the evidence and limits. The existing published article and original demo are preserved.
 
 Fine-tuning helped precision and formatting in this experiment. It also supplied concrete reasons to retain the local default and human approval. A future iteration needs fresh held-out data before testing further changes.

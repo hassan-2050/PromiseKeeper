@@ -29,6 +29,8 @@ The app supports pasted text and `.txt`/`.md` import, paragraph fragments with s
 
 ## Demo and narration
 
+[Watch the updated Tinker experiment demo](https://www.youtube.com/watch?v=5HudDBuLpbU). The 140-second recording shows the measured comparison, a fresh checkpoint import, evidence review, approval and cloud privacy disclosures. See [verification and screenshots](docs/TINKER_DEMO.md). Its local export is `demo/assets/tinker/video/final_demo.mp4`.
+
 [Watch the redesigned interface demo on YouTube](https://www.youtube.com/watch?v=rhyfJHkMmrs). The 112.36-second narrated recording is also available locally at `demo/assets/video/final_demo.mp4`.
 
 The captured browser journey uses real local Qwen inference on explicitly synthetic research notes. The user selected Kokoro's `af_sarah` voice. `demo/assets/video/final_demo.mp4` contains the narrated demo, burned captions and a selectable English caption track. `demo/assets/audio/kokoro_voiceover.wav`, `subtitles.srt` and `narration_provenance.json` preserve the audio, caption timing and model hashes.
@@ -51,7 +53,7 @@ An actual [Tinker experiment](docs/TINKER_EXPERIMENT.md) trained hosted Qwen3-8B
 
 **Ollama remains the default.** The checkpoint fails the production quality guard. A separate research preview accepts only exact frozen synthetic texts and requires cloud consent for every import. The existing quote checks, approval boundary, SQLite, drafts and original demo remain intact. No Gemma or app rebuild is involved.
 
-Review the [full comparison](docs/TINKER_COMPARISON.md), [standalone HTML report](docs/tinker/run-20261025/comparison.html), [raw run bundle](docs/tinker/run-20261025/README.md), [new demo and screenshots](docs/TINKER_DEMO.md) and [unpublished DEV addendum](docs/DEV_TINKER_ADDENDUM_DRAFT.md). Provider session usage reports approximately $0.063 gross estimated training/sampling cost; invoice cost and credit balance remain unverified. Storage and separate UI preview calls are excluded. Install optional experiment dependencies with `uv pip install --python .venv/Scripts/python.exe -r backend/tinker_lab/requirements.txt` and follow the protocol. The new video is a local artifact awaiting YouTube upload; the DEV addendum remains unpublished.
+Review the [full comparison](docs/TINKER_COMPARISON.md), [standalone HTML report](docs/tinker/run-20261025/comparison.html), [raw run bundle](docs/tinker/run-20261025/README.md), [new demo and screenshots](docs/TINKER_DEMO.md) and [unpublished DEV addendum](docs/DEV_TINKER_ADDENDUM_DRAFT.md). Provider session usage reports approximately $0.063 gross estimated training/sampling cost; invoice cost and credit balance remain unverified. Storage and separate UI preview calls are excluded. Install optional experiment dependencies with `uv pip install --python .venv/Scripts/python.exe -r backend/tinker_lab/requirements.txt` and follow the protocol. The [new video is on YouTube](https://www.youtube.com/watch?v=5HudDBuLpbU); the DEV addendum remains unpublished.
 
 ## License
 

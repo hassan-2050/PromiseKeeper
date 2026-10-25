@@ -90,4 +90,4 @@ Both baseline and tuned outputs missed Cleo's implicit migration-guide obligatio
 
 ## Publication status
 
-The available-credit ceiling is $10; no out-of-pocket spending is authorized. Measured outcomes and verification status are [recorded separately](TINKER_COMPARISON.md). The existing local-model demo and its real YouTube URL are preserved. [The DEV addendum](DEV_TINKER_ADDENDUM_DRAFT.md) is unpublished. The existing published article is unchanged. Ask which GitHub account/organization to use before pushing; obtain approval of the final article draft before publication.
+The available-credit ceiling is $10; no out-of-pocket spending is authorized. Measured outcomes and verification status are [recorded separately](TINKER_COMPARISON.md). The [new Tinker demo is on YouTube](https://www.youtube.com/watch?v=5HudDBuLpbU). The existing local-model demo and its real YouTube URL are preserved. [The DEV addendum](DEV_TINKER_ADDENDUM_DRAFT.md) is unpublished. The existing published article is unchanged. The user selected `hassan-2050/PromiseKeeper` for GitHub updates; obtain approval of the final article draft before DEV publication.

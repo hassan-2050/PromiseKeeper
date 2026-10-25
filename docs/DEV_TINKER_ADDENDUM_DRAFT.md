@@ -6,7 +6,7 @@ tags: devchallenge, hf26challenge, opensource, ai
 
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19)*
 
-<!-- Unpublished submission draft for review. DEV publication requires approval. -->
+<!-- Editable article source. Live publication is recorded in docs/PUBLICATION_VERIFICATION.md. Further DEV edits require approval. -->
 
 ## What I Built
 
